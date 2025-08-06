@@ -1,0 +1,13 @@
+.experience h1 {
+	font-size: 4em;
+	font-weight: 800;
+	line-height: 1.1;
+	letter-spacing: -0.03em;
+	color: #ccf381;
+}
+.experience p {
+	line-height: 1.6;
+	font-size: 1.07em;
+	color: white;
+	max-width: 701px;
+}

@@ -1,13 +1,15 @@
 import About from "./pages/About";
-import Header from "./pages/Header";
-import Skills from "./pages/Skills";
+import Experience from "./pages/Experience";
+import Footer from "./pages/Footer";
+import Works from "./pages/Works";
 
 function App() {
   return (
     <>
-      <Header />
       <About />
-      <Skills />
+      <Experience />
+      <Works />
+      <Footer />
     </>
   );
 }

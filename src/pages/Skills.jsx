@@ -11,6 +11,14 @@ import {
   ChevronRight,
 } from "lucide-react";
 
+import htmlLogo from "../assets/logos/html.png";
+import cssLogo from "../assets/logos/html.png";
+import jsLogo from "../assets/logos/javascript.png";
+import phpLogo from "../assets/logos/php.png";
+
+
+
+
 const Skills = () => {
   const scrollRef = useRef(null);
 
@@ -19,14 +27,25 @@ const Skills = () => {
       title: "Web Development",
       description:
         "I build responsive, user-focused websites and applications that not only look great but also function flawlessly. From simple landing pages to full-stack platforms, I use modern tools to bring digital ideas to life quickly and efficiently.",
-      tools: ["React", "Laravel", "TailwindCSS", "Vite", "Inertia.js"],
+      tools: [
+        { name: "HTML", logo: htmlLogo },
+        { name: "CSS", logo: cssLogo },
+        { name: "JavaScript", logo: jsLogo },
+        { name: "PHP", logo: phpLogo },
+      ],
       icon: <Code size={36} className="text-white mb-3" />,
     },
     {
       title: "Project Management",
       description:
-        "I plan, organize, and manage projects from idea to execution. With a balance of structure and flexibility, I ensure tasks get done on time, teams stay aligned, and goals are met—without the burnout.",
-      tools: ["Trello", "Notion", "ClickUp", "Excel"],
+        "Planning, organizing, and delivering projects with cross-functional teams.",
+      tools: [
+        {
+          name: "Trello",
+          svg: `<svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Trello</title><path d="M0 3a3 3 0 013-3h18a3 3 0 013 3v18a3 3 0 01-3 3H3a3 3 0 01-3-3V3zm14.182 2.182v13.636h6.545V5.182h-6.545zM3.273 5.182v7.09h6.545v-7.09H3.273z"/></svg>`,
+          color: "#0079BF"
+        }
+      ],
       icon: <ClipboardCheck size={36} className="text-white mb-3" />,
     },
     {
@@ -144,17 +163,24 @@ const Skills = () => {
             </h3>
             <p className="text-base text-[#a1a1aa] mb-4">{skill.description}</p>
 
-            <div className="flex flex-wrap items-center gap-3 mt-auto">
+            <div className="flex flex-wrap items-center gap-1 mt-auto">
               {skill.tools.map((tool, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-1 text-sm text-[#a1a1aa] bg-[#1f232a] px-3 py-1 rounded-full"
+                  className="relative group w-8 h-8 flex items-center justify-center rounded-full overflow-hidden transition-transform hover:scale-120 shadow"
+                  title={tool.name}
                 >
-                  <Settings2 size={12} className="text-white" />
-                  <span>{tool}</span>
+                  <img src={tool.logo} alt={tool.name} className="w-5 h-5 object-contain" />
+                  <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 pointer-events-none transition whitespace-nowrap z-10">
+                    {tool.name}
+                  </div>
                 </div>
               ))}
             </div>
+
+
+
+
           </div>
         ))}
       </div>
