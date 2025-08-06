@@ -1,7 +1,7 @@
 .about h1 {
 	margin: 0;
 	font-size: 4em;
-	font-weight: 900;
+	font-weight: 800;
 	line-height: 1.1;
 	letter-spacing: -0.03em;
 	color: #4831d4;
@@ -9,7 +9,7 @@
 
 .about p {
 	line-height: 1.6;
-	font-size: 1.07em;
 	color: #3d155f;
-	max-width: 701px;
+	font-size: 1.07em;
+	font-weight: 400;
 }

@@ -1,45 +1,93 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import "../assets/css/Experience.css";
 import workingGIF from "../assets/images/working.gif";
 
+const paragraphVariant = {
+    hidden: { opacity: 0, y: -20 },
+    visible: (i) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: "easeOut",
+            delay: i * 0.2,
+        },
+    }),
+};
+
+const imageVariant = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        },
+    },
+};
 
 const Experience = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-350px" });
+
+
     return (
-        <section className="experience w-full min-h-screen bg-[#4831D4] text-white px-6 md:px-12 flex items-center">
-            <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
+        <section
+            ref={ref}
+            className="experience w-full min-h-screen bg-[#4831D4] px-6 md:px-60 py-20 flex items-center relative overflow-hidden"
+        >
+            <div className="flex flex-col md:flex-row items-center md:gap-52 relative z-10">
                 {/* Left Column - Text */}
-                <div>
-                    <h1 className="mb-6">
+                <div className="flex-1 text-white">
+                    <motion.h1
+                        className="mb-4"
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                        variants={{
+                            hidden: { opacity: 0, y: -20 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+                        }}
+                    >
                         Over the years,
-                    </h1>
+                    </motion.h1>
 
-                    <p className="mb-4 leading-relaxed">
-                        Over the years, I've built systems and tools that help teams work smarter—from e-commerce platforms and ERP systems to internal portals for HR, procurement, and event management. My work spans across full-stack development, WordPress customization, and Search Engine Optimization, with projects done in collaboration with organizaitons and institutions.
-                    </p>
-
-                    <p className="mb-4 leading-relaxed">
-                        Currently, I develop web applications using modern tech stacks like React, and Laravel. I handle both the frontend and backend, focusing on building fast, reliable, and scalable solutions that improve how people work and interact with systems.
-                    </p>
-
-                    <p className="mb-4 leading-relaxed">
-                        Beyond development, I provide IT support and consultation—helping teams troubleshoot, optimize their infrastructure, and adapt technology to fit their workflow. I've worked in environments where I wore many hats, often stepping in as a technical support, systems advisor, or backend troubleshooter.
-                    </p>
-
-                    <p className="mb-4 leading-relaxed">
-                        I've also taken on project and admin support roles. As an Internal Training Manager, I conducted sessions on coding practices and tools. I've also assisted cross-functional teams with testing and interviews, helped manage calendars, procurement, inventory, and documentation during internal and stakeholders meetings.
-                    </p>
-
-                    <p className="leading-relaxed">
-                        I enjoy working across disciplines—building, supporting, and coordinating to deliver real value. Whether it's code, consultation, or keeping a team on track, I focus on what works and get things done.
-                    </p>
+                    {[
+                        "I've developed tools and systems that support teams—ranging from e-commerce platforms to ERP and internal portals. My experience spans full-stack development, SEO, and WordPress customization for various organizations.",
+                        "I mainly build web apps using React and Laravel, working on both frontend and backend. My focus is on performance, reliability, and creating solutions that streamline workflows.",
+                        "I also support IT operations—helping troubleshoot issues, improve infrastructure, and adapt systems to real-world use. I’ve often served as a tech support, systems advisor, or backend fixer.",
+                        "In admin and project roles, I've led training, assisted in hiring and testing, and handled schedules, minutes, inventory, procurement, and production. I make sure daily operations stay on track.",
+                        "I enjoy working across roles—coding, advising, and supporting teams. Whether solving problems or building tools, I focus on delivering results that matter.",
+                    ].map((text, i) => (
+                        <motion.p
+                            key={i}
+                            className="mb-4 leading-relaxed"
+                            variants={paragraphVariant}
+                            initial="hidden"
+                            animate={isInView ? "visible" : "hidden"}
+                            custom={i}
+                        >
+                            {text}
+                        </motion.p>
+                    ))}
                 </div>
 
-                {/* Right Column - Placeholder Image */}
-                <div className="w-full h-96 bg-[#CCF381] rounded-xl shadow-lg flex items-center justify-center">
-                    <span className="text-gray-700 text-xl"><img src={workingGIF} /></span>
-                </div>
-
+                {/* Right Column - Image */}
+                <motion.div
+                    className="hidden md:flex flex-1 w-full justify-center relative"
+                    variants={imageVariant}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
+                    <div className="w-[500px] h-[500px] bg-[#CCF381] rounded-full shadow-xl flex items-center justify-center transform scale-130 translate-x-12">
+                        <img
+                            src={workingGIF}
+                            alt="Working animation"
+                            className="h-full object-contain"
+                        />
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

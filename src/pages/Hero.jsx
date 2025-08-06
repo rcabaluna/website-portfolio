@@ -49,9 +49,9 @@ const Hero = () => {
 
   return (
     <section className="hero w-full h-[90vh] flex items-center px-6 md:px-12">
-      <div className="w-full max-w-7xl mx-auto flex h-full">
+      <div className="w-full max-w-7xl mx-auto flex justify-evenly items-center h-full gap-8">
         {/* Left Column */}
-        <div className="max-w-[59%] text-white flex flex-col justify-between py-12">
+        <div className="text-white flex flex-col justify-between py-12">
           <div className="flex-1 flex flex-col justify-center">
             <h1 className="mb-6 text-5xl font-bold leading-tight">
               <span className="text-white">I’m a</span><br />
@@ -67,10 +67,10 @@ const Hero = () => {
 
           {/* Highlights */}
           <div className="mini-description flex justify-between gap-6 pt-8 text-sm">
-            <ul className="highlights list-none w-1/2 space-y-2">
+            <ul className="highlights list-none space-y-2">
               <li>I build websites, internal tools, and automated systems. I focus on functionality, scalability, and simplicity in every project.</li>
             </ul>
-            <ul className="highlights list-none w-1/2 space-y-2">
+            <ul className="highlights list-none space-y-2">
               <li>As a tech-savvy virtual assistant, I streamline daily tasks. I manage tools and support teams with speed and precision.</li>
             </ul>
           </div>
@@ -88,6 +88,8 @@ const Hero = () => {
         </div>
       </div>
     </section>
+
+
   );
 };
 

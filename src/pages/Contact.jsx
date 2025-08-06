@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../assets/css/Contact.css";
+import { motion, useInView } from "framer-motion";
+
 const Contact = () => {
+  const textRef = useRef(null);
+  const isInView = useInView(textRef, { once: true, margin: "-350px" });
+
   return (
     <section className="contact w-full h-screen bg-[#f4f4f4] flex items-center justify-center px-6">
       <div className="text-center max-w-4xl w-full">
-        {/* Heading */}
-        <h1>Send me a message!</h1>
-        <p className="text-lg text-gray-700 mb-10">
-          Got a question or proposal, or just want <br /> to say hello? Go ahead.
-        </p>
+        <article className="cavalier" data-theme="electric">
+          <div ref={textRef} className="cavalier-content">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              Send me a message!
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            >
+              Got a question or proposal, or just want <br />
+              to say hello? Go ahead.
+            </motion.p>
+          </div>
+        </article>
 
         {/* Contact Form */}
-        <form className="space-y-6 text-left">
+        <form className="space-y-6 text-left mt-8">
           <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
-            {/* Name */}
             <div className="w-full md:w-1/2">
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="name" className="block mb-1">
                 Your Name
               </label>
               <input
@@ -23,13 +42,12 @@ const Contact = () => {
                 name="name"
                 type="text"
                 placeholder="Enter your name"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4831d4]"
+                className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4831d4]"
               />
             </div>
 
-            {/* Email */}
             <div className="w-full md:w-1/2">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="email" className="block mb-1">
                 Email Address
               </label>
               <input
@@ -37,14 +55,13 @@ const Contact = () => {
                 name="email"
                 type="email"
                 placeholder="Enter your email address"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4831d4]"
+                className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4831d4]"
               />
             </div>
           </div>
 
-          {/* Message */}
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="message" className="block mb-1">
               Your Message
             </label>
             <textarea
@@ -52,16 +69,28 @@ const Contact = () => {
               name="message"
               rows="5"
               placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4831d4]"
+              className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4831d4]"
             ></textarea>
           </div>
 
-          <button
-            type="submit"
-            className="mt-4 w-full bg-[#4831d4] text-white py-3 rounded-md font-medium hover:bg-[#3722b6] transition"
-          >
-            Send Message
-          </button>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="relative px-14 py-4 text-[#4831d4] font-semibold text-lg border-2 border-[#4831d4] overflow-hidden transition-all duration-300 hover:text-white group"
+            >
+              <span className="absolute inset-0 bg-[#4831d4] w-0 group-hover:w-full transition-all duration-300 ease-in-out z-0"></span>
+              <span className="relative z-10 flex items-center gap-3">
+                Send Message
+                <svg
+                  className="w-6 h-6 font-extrabold transform transition-transform duration-300 group-hover:translate-x-1"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z" />
+                </svg>
+              </span>
+            </button>
+          </div>
         </form>
       </div>
     </section>

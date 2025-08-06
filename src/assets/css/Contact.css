@@ -1,6 +1,63 @@
-.contact h1{
-    font-size: 3.2em;
-    font-weight: bold;
-    line-height: 1.3;
-    max-width: unset;
+.contact .cavalier {
+	margin-bottom: 5.2em;
+}
+
+.contact .cavalier h1 {
+	margin: 0;
+	font-size: 3.5em;
+	font-weight: 900;
+	line-height: 1.1;
+	letter-spacing: -0.03em;
+	color: #4831d4;
+}
+
+.contact .cavalier p {
+	color: #3d155f;
+	margin: 0 auto;
+	font-size: 1.6em;
+	line-height: 1.2;
+	margin-top: 15px;
+	letter-spacing: 0.02em;
+}
+
+.contact label {
+	color: #3d155f;
+	font-weight: 600;
+}
+
+.contact input {
+	color: #3d155f;
+}
+
+.input textarea,
+.input input:not([type="submit"]):not([type="button"]) {
+	line-height: 1.5;
+	font-size: 1.15em;
+	font-weight: 600;
+}
+
+.contact textarea,
+.contact [type="tel"],
+.contact [type="text"],
+.contact [type="email"],
+.contact [type="search"],
+.contact [type="password"] {
+	border: 0;
+	padding: 0.6em;
+	padding-left: 0;
+	position: relative;
+	color: #3d155f;
+	background: transparent;
+	border-bottom: 1px solid #3d155f;
+}
+
+.contact textarea:focus,
+.contact [type="tel"]:focus,
+.contact [type="text"]:focus,
+.contact [type="email"]:focus,
+.contact [type="search"]:focus,
+.contact [type="password"]:focus {
+	outline: none;
+	border-bottom: 1px solid #3d155f; /* keeps the same as default */
+	box-shadow: none; /* removes any browser-specific shadows */
 }

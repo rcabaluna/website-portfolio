@@ -5,9 +5,16 @@
 	letter-spacing: -0.03em;
 	color: #ccf381;
 }
+
+@media (max-width: 768px) {
+	.experience h1 {
+		font-size: 2.25em; /* or adjust as needed */
+	}
+}
+
 .experience p {
 	line-height: 1.6;
 	font-size: 1.07em;
+	font-weight: 400;
 	color: white;
-	max-width: 701px;
 }

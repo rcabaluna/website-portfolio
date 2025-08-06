@@ -3,40 +3,37 @@ import "../assets/css/Footer.css"; // Adjust the path as necessary
 
 const Footer = () => {
     return (
-        <footer className=" footer w-full bg-[#3D155F] text-[#CCF381] px-6 md:px-12 py-12 flex flex-col justify-between min-h-screen">
+        <footer className="footer w-full min-h-screen bg-[#3D155F] px-6 md:px-60 py-20 flex items-center relative overflow-hidden">
+            <div className="inner-content flex flex-col justify-center w-full text-white">
+                {/* Top Section: Flex with 3 columns */}
+                <div className="footer-main flex flex-col md:flex-row justify-between gap-12 mb-8">
 
-            <div className="inner-content flex flex-col justify-center w-full">
-                {/* Top Section: 3 Columns */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
-
-                    {/* Left Column */}
                     <div className="space-y-4">
-                        <h2 className="text-xl font-semibold">Say Hello</h2>
-                        <p>rcabalunajr@gmail.com</p>
-                        <p>+63 945-318-2617</p>
+                        <span class="say-hello">Say Hello</span>
+                        <ul>
+                            <li>rcabalunajr@gmail.com</li>
+                            <li>+63 945-318-2617</li>
+                        </ul>
                     </div>
 
-                    {/* Center Column */}
                     <div className="flex flex-col items-center md:items-start justify-start space-y-2">
-                        <a href="#" className="hover:underline">My Work</a>
-                        <a href="#" className="hover:underline">My Shelf</a>
-                        <a href="#" className="hover:underline">My Résumé</a>
+                        <ul>
+                            <li><a href="#">My Work</a></li>
+                            <li><a href="#">My Résumé</a></li>
+                        </ul>
                     </div>
 
-                    {/* Right Column (Empty) */}
-                    <div></div>
                 </div>
 
                 {/* Divider */}
                 <div className="border-t border-[#CCF381] opacity-30 my-6"></div>
 
-                {/* Bottom Section: 2 Columns */}
+                {/* Bottom Section */}
                 <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
                     <div>© Ruel O. Cabaluna Jr. 2025</div>
                     <div>FB LN YT</div>
                 </div>
             </div>
-
         </footer>
     );
 };
