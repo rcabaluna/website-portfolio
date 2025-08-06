@@ -14,12 +14,6 @@ const Footer = () => {
                         <h2 className="text-xl font-semibold">Say Hello</h2>
                         <p>rcabalunajr@gmail.com</p>
                         <p>+63 945-318-2617</p>
-
-                        <div className="space-y-1 pt-6">
-                            <p>My Work</p>
-                            <p>My Shelf</p>
-                            <p>My Résumé</p>
-                        </div>
                     </div>
 
                     {/* Center Column */}
