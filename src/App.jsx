@@ -5,21 +5,34 @@ import Footer from "./pages/Footer";
 import Hero from "./pages/Hero";
 import Works from "./pages/Works";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 function App() {
   const containerRef = useRef(null);
   const sectionsRef = useRef([]);
   const currentIndexRef = useRef(0);
   const isScrollingRef = useRef(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
 
     const handleWheel = (e) => {
-      e.preventDefault();
+      if (!isDesktop) return; // disable scroll snapping on mobile/tablet
 
+      e.preventDefault();
       if (isScrollingRef.current) return;
+
       isScrollingRef.current = true;
 
       const direction = e.deltaY > 0 ? 1 : -1;
@@ -37,15 +50,15 @@ function App() {
 
       setTimeout(() => {
         isScrollingRef.current = false;
-      }, 800); // Slightly slower for more stickiness
+      }, 700); // adjust scroll delay if needed
     };
 
-    container.addEventListener("wheel", handleWheel, { passive: false });
+    container?.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      container.removeEventListener("wheel", handleWheel);
+      container?.removeEventListener("wheel", handleWheel);
     };
-  }, []);
+  }, [isDesktop]);
 
   const sections = [
     <Hero />,
@@ -59,13 +72,15 @@ function App() {
   return (
     <div
       ref={containerRef}
-      className="h-screen overflow-hidden snap-y snap-mandatory scroll-smooth"
+      className={`w-full ${isDesktop ? "h-screen overflow-hidden" : "overflow-auto"
+        }`}
     >
       {sections.map((Component, index) => (
         <div
           key={index}
           ref={(el) => (sectionsRef.current[index] = el)}
-          className="h-screen w-full snap-start"
+          className={`w-full ${isDesktop ? "h-screen" : "min-h-fit"
+            }`}
         >
           {Component}
         </div>

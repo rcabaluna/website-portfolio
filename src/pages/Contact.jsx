@@ -7,7 +7,8 @@ const Contact = () => {
   const isInView = useInView(textRef, { once: true, margin: "-350px" });
 
   return (
-    <section className="contact w-full h-screen bg-[#f4f4f4] flex items-center justify-center px-6">
+    <section className="contact w-full min-h-fit md:h-screen bg-[#f4f4f4] flex items-center justify-center px-12 py-20 md:py-0">
+
       <div className="text-center max-w-4xl w-full">
         <article className="cavalier" data-theme="electric">
           <div ref={textRef} className="cavalier-content">

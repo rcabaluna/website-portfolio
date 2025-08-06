@@ -36,7 +36,7 @@ const Experience = () => {
     return (
         <section
             ref={ref}
-            className="experience w-full min-h-screen bg-[#4831D4] px-6 md:px-60 py-20 flex items-center relative overflow-hidden"
+            className="experience w-full min-h-screen bg-[#4831D4] px-12 md:px-60 py-20 flex items-center relative overflow-hidden"
         >
             <div className="flex flex-col md:flex-row items-center md:gap-52 relative z-10">
                 {/* Left Column - Text */}

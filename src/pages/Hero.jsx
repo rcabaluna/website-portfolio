@@ -6,7 +6,7 @@ const Hero = () => {
   const words = [
     "Web Developer.",
     "Project Manager.",
-    "Virtual Assistant."
+    "Virtual Assistant.",
   ];
 
   const [text, setText] = useState("");
@@ -21,7 +21,7 @@ const Hero = () => {
     if (pauseBeforeTyping) {
       const delay = setTimeout(() => {
         setPauseBeforeTyping(false);
-      }, 800); // delay before typing next word
+      }, 800);
       return () => clearTimeout(delay);
     }
 
@@ -39,7 +39,7 @@ const Hero = () => {
       } else if (isDeleting && text === "") {
         setIsDeleting(false);
         setWordIndex((prev) => (prev + 1) % words.length);
-        setPauseBeforeTyping(true); // <-- wait before typing next word
+        setPauseBeforeTyping(true);
       }
     };
 
@@ -48,48 +48,51 @@ const Hero = () => {
   }, [text, isDeleting, wordIndex, speed, pauseBeforeTyping]);
 
   return (
-    <section className="hero w-full h-[90vh] flex items-center px-6 md:px-12">
-      <div className="w-full max-w-7xl mx-auto flex justify-evenly items-center h-full gap-8">
+    <section className="hero w-full min-h-screen bg-[#22272f] px-4 md:px-6 flex items-center">
+      <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 py-12 md:py-16">
         {/* Left Column */}
-        <div className="text-white flex flex-col justify-between py-12">
-          <div className="flex-1 flex flex-col justify-center">
-            <h1 className="mb-6 text-5xl font-bold leading-tight">
-              <span className="text-white">I’m a</span><br />
-              <span className="running-text underline bg-[#ccf381] text-[#22272f] px-2 rounded">
+        <div className="text-white w-full md:w-1/2">
+          <h1 className="mb-6 text-4xl md:text-5xl font-bold leading-tight">
+            <span className="text-white block mb-2">I’m a</span>
+            <div className="relative min-h-[3.5rem] w-full">
+              <span className="invisible block font-bold">
+                {words.reduce((a, b) => (a.length > b.length ? a : b))}
+              </span>
+              <span className="absolute top-0 left-0 underline bg-[#ccf381] text-[#22272f] px-2 rounded inline-block">
                 {text}
               </span>
               <span className="blinking-cursor text-white">|</span>
-            </h1>
-            <p className="subtitle mb-8">
-              I build practical, user-centered solutions—whether <br /> through code or everyday support.
-            </p>
-          </div>
+            </div>
+          </h1>
+          <p className="subtitle mb-6 text-base md:text-lg leading-relaxed">
+            I build practical, user-centered solutions—whether{" "}
+            <br className="hidden sm:block" /> through code or everyday support.
+          </p>
 
-          {/* Highlights */}
-          <div className="mini-description flex justify-between gap-6 pt-8 text-sm">
-            <ul className="highlights list-none space-y-2">
-              <li>I build websites, internal tools, and automated systems. I focus on functionality, scalability, and simplicity in every project.</li>
-            </ul>
-            <ul className="highlights list-none space-y-2">
-              <li>As a tech-savvy virtual assistant, I streamline daily tasks. I manage tools and support teams with speed and precision.</li>
+          <div className="mini-description flex flex-col gap-4 pt-4 text-sm">
+            <ul className="list-none space-y-2">
+              <li>
+                I build websites, internal tools, and automated systems.
+                I focus on functionality, scalability, and simplicity in every project.
+              </li>
+              <li>
+                As a tech-savvy virtual assistant, I streamline daily tasks.
+                I manage tools and support teams with speed and precision.
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Right Column */}
-        <div className="flex items-center justify-center">
-          <div className="gwapo">
-            <img
-              src={profilePic}
-              alt="Profile"
-              className="max-w-[350px] h-auto object-cover rounded-lg shadow-lg"
-            />
-          </div>
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img
+            src={profilePic}
+            alt="Profile"
+            className="w-64 sm:w-80 md:w-[300px] h-auto object-cover rounded-lg shadow-lg"
+          />
         </div>
       </div>
     </section>
-
-
   );
 };
 

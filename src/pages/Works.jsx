@@ -31,7 +31,7 @@ const Works = () => {
     return (
         <section
             ref={ref}
-            className="works w-full min-h-screen bg-[#f4f4f4] px-4 py-28 flex items-center justify-center relative"
+            className="works w-full min-h-fit md:min-h-screen bg-[#f4f4f4] px-12 py-28 flex items-center justify-center relative"
         >
             <div className="w-full max-w-7xl mx-auto bg-white p-6 md:p-12 flex flex-col gap-14">
                 {/* Header with animation */}
@@ -75,7 +75,7 @@ const Works = () => {
                     ))}
                 </div>
 
-                {/* See More Button (no animation) */}
+                {/* See More Button */}
                 <div className="flex justify-center">
                     <button
                         type="button"
