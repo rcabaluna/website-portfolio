@@ -53,11 +53,10 @@ const Experience = () => {
                     </motion.h1>
 
                     {[
-                        "I've developed tools and systems that support teams—ranging from e-commerce platforms to ERP and internal portals. My experience spans full-stack development, SEO, and WordPress customization for various organizations.",
+                        "I've built products for companies and businesses around the globe ranging from marketing websites to complex solutions and enterprise apps with focus on fast, elegant and accessible user experiences.",
                         "I mainly build web apps using React and Laravel, working on both frontend and backend. My focus is on performance, reliability, and creating solutions that streamline workflows.",
-                        "I also support IT operations—helping troubleshoot issues, improve infrastructure, and adapt systems to real-world use. I’ve often served as a tech support, systems advisor, or backend fixer.",
-                        "In admin and project roles, I've led training, assisted in hiring and testing, and handled schedules, minutes, inventory, procurement, and production. I make sure daily operations stay on track.",
-                        "I enjoy working across roles—coding, advising, and supporting teams. Whether solving problems or building tools, I focus on delivering results that matter.",
+                        "I also support operations—helping troubleshoot issues, improve IT infrastructure, and adapt systems to real-world use. I’ve often served as a tech support, systems advisor, or backend fixer.",
+                        "In admin and project roles, I've led training, assisted in hiring process, handled schedules, inventory, procurement, and production. I make sure daily operations stay on track.",
                     ].map((text, i) => (
                         <motion.p
                             key={i}
