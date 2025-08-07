@@ -1,0 +1,70 @@
+
+@media (min-width: 651px) {
+    main {
+        font-size: .9rem;
+    }
+}
+
+.ihRwnH #profile-summary {
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.ihRwnH #name {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 4.5rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #4831d4;
+}
+
+.ihRwnH #profile-summary h2 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.602em;
+}
+
+
+.ihRwnH #profile-summary p {
+    margin: 3em 0 2em;
+}
+
+.ihRwnH article p {
+    font-size: 1.2em;
+}
+
+@media (min-width: 1000px) {
+    .ihRwnH article .company > p, .ihRwnH article > section > p, .ihRwnH article .company .points, .ihRwnH article #profile-summary > p {
+        max-width: 70%;
+    }
+}
+
+.ihRwnH article > section:not(:last-of-type) {
+    margin-bottom: 5em;
+}
+
+.ihRwnH article > section {
+    position: relative;
+}
+
+.ihRwnH h3 {
+    font-size: 1.424em;
+    margin: 0;
+}
+
+#main a:not(.no-marker):not(.color-off), #main h3:not(.color-off), #main h4:not(.color-off) {
+    color: var(--electric-blue);
+}
+
+#main .heading:after, #main a:not(.no-marker):after {
+    content: "";
+    background: var(--lime);
+    height: .4em;
+    width: 109%;
+    display: block;
+    margin-top: -.6rem;
+    margin-left: -4%;
+    position: absolute;
+    z-index: -1;
+}

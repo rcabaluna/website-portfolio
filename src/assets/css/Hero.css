@@ -37,14 +37,14 @@
 	align-items: center;
 }
 
-.highlights {
+.hero .highlights {
 	justify-content: space-between;
 	color: #ccf381;
 	line-height: 1.5;
 	font-size: 0.965em;
 }
 
-.running-text {
+.hero .running-text {
 	line-height: 1.2;
 	/* color: #4831D4; */
 	text-transform: uppercase;

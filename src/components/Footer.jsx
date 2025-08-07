@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="footer-main flex flex-col md:flex-row justify-between gap-12 mb-8">
 
                     <div className="space-y-4">
-                        <span class="say-hello">Say Hello</span>
+                        <span className="say-hello">Say Hello</span>
                         <ul>
                             <li>rcabalunajr@gmail.com</li>
                             <li>+63 945-318-2617</li>

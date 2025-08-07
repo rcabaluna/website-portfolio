@@ -32,15 +32,14 @@ const Experience = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-350px" });
 
-
     return (
         <section
             ref={ref}
-            className="experience w-full min-h-screen bg-[#4831D4] px-12 md:px-60 py-20 flex items-center relative overflow-hidden"
+            className="experience w-full min-h-screen bg-[#4831D4] py-12 px-12 md:px-40 flex items-center relative overflow-hidden"
         >
-            <div className="flex flex-col md:flex-row items-center md:gap-52 relative z-10">
+            <div className="flex flex-col md:flex-row items-center md:gap-12 relative z-10 w-full">
                 {/* Left Column - Text */}
-                <div className="flex-1 text-white">
+                <div className="basis-[45%] text-white">
                     <motion.h1
                         className="mb-4"
                         initial="hidden"
@@ -75,12 +74,12 @@ const Experience = () => {
 
                 {/* Right Column - Image */}
                 <motion.div
-                    className="hidden md:flex flex-1 w-full justify-center relative"
+                    className="hidden md:flex basis-[55%] w-full justify-center relative"
                     variants={imageVariant}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                 >
-                    <div className="w-[500px] h-[500px] bg-[#CCF381] rounded-full shadow-xl flex items-center justify-center transform scale-130 translate-x-12">
+                    <div className="w-[500px] h-[500px] bg-[#CCF381] rounded-full shadow-sm flex items-center justify-center transform scale-123 translate-x-12">
                         <img
                             src={workingGIF}
                             alt="Working animation"

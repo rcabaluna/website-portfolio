@@ -22,15 +22,14 @@
 
 .contact label {
 	color: #3d155f;
-	font-weight: 600;
 }
 
 .contact input {
 	color: #3d155f;
 }
 
-.input textarea,
-.input input:not([type="submit"]):not([type="button"]) {
+.contact input textarea,
+.contact input input:not([type="submit"]):not([type="button"]) {
 	line-height: 1.5;
 	font-size: 1.15em;
 	font-weight: 600;
@@ -58,6 +57,6 @@
 .contact [type="search"]:focus,
 .contact [type="password"]:focus {
 	outline: none;
-	border-bottom: 1px solid #3d155f; /* keeps the same as default */
-	box-shadow: none; /* removes any browser-specific shadows */
+	border-bottom: 1px solid #3d155f;
+	box-shadow: none;
 }
