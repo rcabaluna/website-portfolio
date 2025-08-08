@@ -19,6 +19,24 @@
 	letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 768px) {
+	.contact .cavalier h1 {
+		font-size: 2.5em;
+	}
+	.contact .cavalier p {
+		font-size: 1.0em;
+	}
+
+	.contact .cavalier {
+		margin-bottom: 3em;
+	}
+
+	.contact label {
+		font-weight: 600;
+	}
+	
+}
+
 .contact label {
 	color: #3d155f;
 }

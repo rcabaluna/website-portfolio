@@ -2,7 +2,7 @@
         margin: calc(3.5em * 1.2) 7vw;
 }
 
-#name {
+#profile-summary #name {
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 4.5rem;
@@ -25,34 +25,33 @@ h3, h4  {
     color: #4831d4;
 }
 
-.ihRwnH p, .ihRwnH ul {
+p,ul {
     color: rgba(71, 71, 71, 0.75);
 }
 
-.ihRwnH .company:not(:last-of-type) {
+.company:not(:last-of-type) {
     margin-bottom: 2rem;
 }
 
-.ihRwnH .company header {
+/* .company header {
     display: flex;
-}
+} */
 
-.ihRwnH .company .points {
+.company .points {
     margin-top: 1em;
     margin-left: 1em;
 }
 
-.ihRwnH .company .outro, .ihRwnH .company .points {
-    font-size: 1.1em;
-}
-
-.ihRwnH ul li:before {
+ul li:before {
     width: 0.4em;
-    content: '';
     height: 0.4em;
     margin-right: 0.3em;
     vertical-align: 10%;
     display: inline-block;
     filter: contrast(1.2);
-    background: currentColor;
+}
+
+.company h4{
+    margin-top: 0px;
+    margin-bottom: 0px;
 }

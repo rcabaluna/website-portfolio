@@ -8,8 +8,8 @@ import ResumeMainContent from "../components/resume/MainContent";
 
 const Resume = () => {
   return (
-    <div className="min-h-screen px-30 py-20">
-      <div className="flex w-full h-full overflow-hidden bg-[#f4f4f4]">
+    <div id="#resume" className="min-h-screen md:px-30 md:py-20 bg-white">
+      <div className="flex w-full h-full overflow-hidden bg-[#f5f4fc]">
         <ResumeSidebar/>
         <ResumeMainContent />
       </div>

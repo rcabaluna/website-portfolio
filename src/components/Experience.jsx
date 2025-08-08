@@ -35,7 +35,7 @@ const Experience = () => {
     return (
         <section
             ref={ref}
-            className="experience w-full min-h-screen bg-[#4831D4] py-12 px-12 md:px-40 flex items-center relative overflow-hidden"
+            className="experience w-full md:min-h-screen bg-[#4831D4] py-6 md:px-40 px-6 flex md:items-center relative overflow-hidden"
         >
             <div className="flex flex-col md:flex-row items-center md:gap-12 relative z-10 w-full">
                 {/* Left Column - Text */}
@@ -73,12 +73,12 @@ const Experience = () => {
 
                 {/* Right Column - Image */}
                 <motion.div
-                    className="hidden md:flex basis-[55%] w-full justify-center relative"
+                    className="hidden md:flex basis-[55%] w-full relative"
                     variants={imageVariant}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                 >
-                    <div className="w-[500px] h-[500px] bg-[#CCF381] rounded-full shadow-sm flex items-center justify-center transform scale-123 translate-x-12">
+                    <div className="w-[500px] h-[500px] bg-[#CCF381] rounded-full shadow-sm flex justify-center transform scale-125 translate-x-12">
                         <img
                             src={workingGIF}
                             alt="Working animation"

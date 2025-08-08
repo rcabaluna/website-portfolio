@@ -7,7 +7,7 @@ const Contact = () => {
   const isInView = useInView(textRef, { once: true, margin: "-350px" });
 
   return (
-    <section className="contact w-full min-h-fit md:h-screen bg-[#f4f4f4] flex items-center justify-center px-12 py-20 md:py-0">
+    <section className="contact w-full min-h-fit md:h-screen bg-[#f4f4f4] flex items-center justify-center md:px-12 md:py-20 py-6 px-12">
 
       <div className="text-center max-w-4xl w-full">
         <article className="cavalier" data-theme="electric">
@@ -25,7 +25,7 @@ const Contact = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             >
-              Got a question or proposal, or just want <br />
+              Got a question or proposal, or just want
               to say hello? Go ahead.
             </motion.p>
           </div>
@@ -75,22 +75,23 @@ const Contact = () => {
           </div>
 
           <div className="flex justify-center">
-            <button
-              type="submit"
-              className="relative px-14 py-4 text-[#4831d4] font-semibold text-lg border-2 border-[#4831d4] overflow-hidden transition-all duration-300 hover:text-white group"
-            >
-              <span className="absolute inset-0 bg-[#4831d4] w-0 group-hover:w-full transition-all duration-300 ease-in-out z-0"></span>
-              <span className="relative z-10 flex items-center gap-3">
-                Send Message
-                <svg
-                  className="w-6 h-6 font-extrabold transform transition-transform duration-300 group-hover:translate-x-1"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z" />
-                </svg>
-              </span>
-            </button>
+         <button
+  type="submit"
+  className="relative px-6 py-2 text-sm text-[#4831d4] font-semibold border-2 border-[#4831d4] overflow-hidden transition-all duration-300 hover:text-white group sm:px-14 sm:py-4 sm:text-lg"
+>
+  <span className="absolute inset-0 bg-[#4831d4] w-0 group-hover:w-full transition-all duration-300 ease-in-out z-0"></span>
+  <span className="relative z-10 flex items-center gap-2 sm:gap-3">
+    Send Message
+    <svg
+      className="w-4 h-4 sm:w-6 sm:h-6 font-extrabold transform transition-transform duration-300 group-hover:translate-x-1"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z" />
+    </svg>
+  </span>
+</button>
+
           </div>
         </form>
       </div>

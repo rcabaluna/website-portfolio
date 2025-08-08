@@ -23,7 +23,7 @@ const fadeUpParagraph = {
 
 const About = () => {
   return (
-    <section className="about w-full min-h-screen px-12 md:px-40 py-20 flex flex-col justify-center">
+    <section className="about w-full md:min-h-screen md:px-12 px-6 md:px-40 md:py-20 py-10 flex flex-col md:justify-center">
       <div>
         {/* Row 1: Develop */}
         <div className="flex flex-col md:flex-row items-center">

@@ -1,24 +1,34 @@
+import { useRef, useEffect, useState } from "react";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Experience from "../components/Experience";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Works from "../components/Works";
-
-import { useRef, useEffect, useState } from "react";
+// import Works from "../components/Works";
 
 function HomePage() {
   const containerRef = useRef(null);
   const sectionsRef = useRef([]);
   const currentIndexRef = useRef(0);
   const isScrollingRef = useRef(false);
+
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+  const [logoColor, setLogoColor] = useState("#4831d4");
+
+  // Define colors for each section index
+  const sectionColors = [
+    "#CCF381", // Hero
+    "#4831D4", // About
+    "#CCF381", // Experience
+    "#4831D4", // Contact
+    "#CCF381", // Footer
+  ];
 
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 1024);
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -30,8 +40,6 @@ function HomePage() {
     let scrollTimeout;
 
     const handleWheel = (e) => {
-      if (!isDesktop) return;
-
       e.preventDefault();
       if (isScrollingRef.current) return;
 
@@ -50,6 +58,8 @@ function HomePage() {
           block: "start",
         });
 
+        setLogoColor(sectionColors[newIndex] || "#4831d4");
+
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
           isScrollingRef.current = false;
@@ -58,7 +68,6 @@ function HomePage() {
     };
 
     container?.addEventListener("wheel", handleWheel, { passive: false });
-
     return () => {
       container?.removeEventListener("wheel", handleWheel);
       clearTimeout(scrollTimeout);
@@ -75,12 +84,13 @@ function HomePage() {
             const index = sectionsRef.current.indexOf(entry.target);
             if (index !== -1) {
               currentIndexRef.current = index;
+              setLogoColor(sectionColors[index] || "#4831d4");
             }
           }
         });
       },
       {
-        root: containerRef.current,
+        root: null,
         threshold: 0.5,
       }
     );
@@ -102,20 +112,24 @@ function HomePage() {
   ];
 
   return (
-    <div
-      ref={containerRef}
-      className={`w-full ${isDesktop ? "h-screen overflow-hidden" : "overflow-auto"}`}
-    >
-      {sections.map((Component, index) => (
-        <div
-          key={index}
-          ref={(el) => (sectionsRef.current[index] = el)}
-          className={`w-full ${isDesktop ? "h-screen" : "min-h-fit"}`}
-        >
-          {Component}
-        </div>
-      ))}
-    </div>
+    <>
+      <Header logoColor={logoColor} />
+
+      <div
+        ref={containerRef}
+        className={`w-full ${isDesktop ? "h-screen overflow-hidden" : "overflow-auto"}`}
+      >
+        {sections.map((Component, index) => (
+          <div
+            key={index}
+            ref={(el) => (sectionsRef.current[index] = el)}
+            className={`w-full ${isDesktop ? "h-screen" : "min-h-fit"}`}
+          >
+            {Component}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
