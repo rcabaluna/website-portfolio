@@ -80,10 +80,10 @@ const Header = ({ logoColor }) => {
             </li>
             <li>
               <a
-                href="#experience"
+                href="/works"
                 className="inline-block border-b-2 border-transparent hover:border-[#4831d4] transition-all duration-300"
               >
-                My Work
+                My Works
               </a>
             </li>
           </ul>

@@ -145,7 +145,7 @@ const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="/work"
+              href="/works"
               id="my-work-btn-hero"
               className="border-2 border-[#ccf381] text-[#FEC601] px-6 py-3 rounded font-semibold shadow hover:bg-[#ccf381] transition-all duration-300 ease-in-out"
               variants={{
@@ -153,7 +153,7 @@ const Hero = () => {
                 visible: { y: 0, opacity: 1 }
               }}
             >
-              My Work
+              My Works
             </motion.a>
           </motion.div>
         </div>

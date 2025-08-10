@@ -20,8 +20,8 @@ const Footer = () => {
                         <div className="space-y-4 text-left">
                             <span className="say-hello mb-0">&nbsp;</span>
                             <ul>
-                                <li><a href="#">My Work</a></li>
-                                <li><a href="#">My Resume</a></li>
+                                <li><a href="/works">My Works</a></li>
+                                <li><a href="/resume">My Resume</a></li>
                             </ul>
                         </div>
                     </div>

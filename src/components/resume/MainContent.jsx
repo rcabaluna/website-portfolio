@@ -2,7 +2,7 @@
 import React from "react";
 import Experiences from "../resume/Experiences";
 
-const   MainContent = () => {
+const MainContent = () => {
   // Work experience
   return (
     <div className="w-full md:w-4/5 p-6">
@@ -15,7 +15,7 @@ const   MainContent = () => {
             I build and support web systems that enhance team efficiency. I’m also experienced in handling day-to-day admin and technical support tasks as a virtual assistant—bringing practical and reliable solutions to the table.
           </p>
         </header>
-          <hr />
+        <hr />
 
         {/* Experiences Section */}
         <Experiences />
@@ -24,9 +24,9 @@ const   MainContent = () => {
         <section id="projects" className="mt-10">
           <h3 className="font-bold text-xl mb-4">Projects</h3>
           <p className="text-sm">
-            You can find some of my work at{" "}
-            <a href="https://ruel.dev/projects" className="text-blue-700 underline">
-              ruel.dev/projects
+            You can find some of my works {" "}
+            <a href="/works" className="text-blue-700 underline">
+              here
             </a>
             . Project demos or source code can be provided upon request.
           </p>

@@ -39,7 +39,7 @@ const WorkDetails = () => {
     };
 
     return (
-        <div className="w-full bg-white px-6 md:px-40 py-20 flex flex-col relative overflow-hidden">
+        <div className="w-full bg-white px-40 py-20 pt-24">
             <div className="inner-content flex flex-col gap-10 w-full text-gray-800">
                 {/* Project Title */}
                 <h1 className="text-3xl md:text-4xl font-bold text-center">
@@ -86,7 +86,7 @@ const WorkDetails = () => {
                 </div>
 
                 {/* Project Description */}
-                <div className="max-w-4xl mx-auto text-justify leading-relaxed space-y-4">
+                <div className=" mx-auto text-justify leading-relaxed space-y-4">
                     {Array.isArray(project.description) ? (
                         project.description.map((paragraph, index) => (
                             <p key={index}>{paragraph}</p>
@@ -98,7 +98,7 @@ const WorkDetails = () => {
 
 
                 {/* Tech Stack */}
-                <div className="max-w-4xl mx-auto text-center">
+                <div className=" mx-auto text-center">
                     <h2 className="text-xl font-semibold mb-4">
                         Tech Stack
                     </h2>
