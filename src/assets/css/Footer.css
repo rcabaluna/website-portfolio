@@ -1,5 +1,5 @@
-/* 
-.footer ul {
+.footer ul,
+.copyright {
 	font-size: 1.15em;
 }
 
@@ -15,4 +15,9 @@
 	letter-spacing: 0.25em;
 	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
-} */
+}
+
+.footer a,
+.copyright {
+	color: #ccf381;
+}

@@ -13,3 +13,88 @@
 	font-size: 1.07em;
 	font-weight: 400;
 }
+
+@media (max-width: 639px) {
+	.about {
+		padding: 4em 2em; /* smaller padding */
+		font-size: 0.84em;
+	}
+
+	.about h1 {
+		font-size: 2.5em; /* smaller font size */
+	}
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+	.about {
+		padding: 2.5em 2rem; /* small padding */
+		font-size: 0.9em;
+	}
+
+	.about h1 {
+		font-size: 2.8em; /* small font size */
+	}
+
+	.top-svg,
+	.bottom-svg {
+		display: hidden; /* show top SVG on small screens */
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.about {
+		padding: 3em 3rem; /* medium padding */
+		font-size: 0.95em;
+	}
+
+	.top-svg,
+	.bottom-svg {
+		display: none; /* hide top SVG on medium screens */
+	}
+
+	.about h1 {
+		font-size: 3em; /* medium font size */
+	}
+
+	.develop-row,
+	.support-row {
+		margin-bottom: 2rem; /* add margin between rows */
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+	.about {
+		padding: 10em 4rem;
+		font-size: 0.7em;
+	}
+
+	.top-svg,
+	.bottom-svg {
+		display: block; /* show top SVG on large screens */
+	}
+
+	.about h1 {
+		font-size: 5em; /* larger font size */
+	}
+
+	.develop-row,
+	.support-row {
+		margin-bottom: 3rem; /* add margin between rows */
+	}
+}
+
+@media (min-width: 1280px) and (max-width: 1535px) {
+	.about {
+		padding: 10em 4rem;
+		font-size: 0.9em;
+	}
+
+	.top-svg,
+	.bottom-svg {
+		display: block; /* show top SVG on extra large screens */
+	}
+
+	.about h1 {
+		font-size: 5em; /* larger font size */
+	}
+}

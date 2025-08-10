@@ -5,41 +5,41 @@ import Technologies from "./Technologies";
 
 const Sidebar = () => {
 
-// Core technologies
-const coreTechnologies = [
-  "HTML & CSS",
-  "JavaScript",
-  "JQuery",
-  "Tailwind CSS",
-  "Bootstrap",
-  "PHP",
-  "Laravel",
-  "CodeIgniter",
-  "ReactJS",
-  "Next.js",
-  "MySQL/PostgreSQL",
-  "MongoDB",
-  "WordPress",
-  "Shopify",
-];
+  // Core technologies
+  const coreTechnologies = [
+    "HTML & CSS",
+    "JavaScript",
+    "JQuery",
+    "Tailwind CSS",
+    "Bootstrap",
+    "PHP",
+    "Laravel",
+    "CodeIgniter",
+    "ReactJS",
+    "Next.js",
+    "MySQL/PostgreSQL",
+    "MongoDB",
+    "WordPress",
+    "Shopify",
+  ];
 
 
-// Tools used
-const tools = [
-  "VS Code",
-  "Git & GitHub",
-  "Postman",
-  "Google Workspace",
-  "Trello / Notion",
-  "Canva / Figma",
-  "Adobe Creative Suite",
-  "Zoom / Google Meet",
-  "Slack / Discord",
-  "Loom / OBS Studio",
-  "Tableau / Power BI",
-];
+  // Tools used
+  const tools = [
+    "VS Code",
+    "Git & GitHub",
+    "Postman",
+    "Google Workspace",
+    "Trello / Notion",
+    "Canva / Figma",
+    "Adobe Creative Suite",
+    "Zoom / Google Meet",
+    "Slack / Discord",
+    "Loom / OBS Studio",
+    "Tableau / Power BI",
+  ];
 
-    
+
   return (
     <div className="w-1/5 p-4 hidden md:block">
       <div id="resume-outlines">

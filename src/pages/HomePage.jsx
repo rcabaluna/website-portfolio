@@ -5,7 +5,7 @@ import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-// import Works from "../components/Works";
+import Works from "../components/Works";
 
 function HomePage() {
   const containerRef = useRef(null);
@@ -21,6 +21,7 @@ function HomePage() {
     "#CCF381", // Hero
     "#4831D4", // About
     "#CCF381", // Experience
+    "#4831D4", // Contact
     "#4831D4", // Contact
     "#CCF381", // Footer
   ];
@@ -106,7 +107,7 @@ function HomePage() {
     <Hero />,
     <About />,
     <Experience />,
-    // <Works />,
+    <Works />,
     <Contact />,
     <Footer />,
   ];

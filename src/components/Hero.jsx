@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion"; // ✅ Added for animations
 import "../assets/css/Hero.css";
 import profilePic from "../assets/images/profile.png";
 
 const Hero = () => {
-  const words = ["Web Developer.", "Project Manager.", "Virtual Assistant."];
+  const words = ["WEB DEVELOPER.", "PROJECT MANAGER.", "VIRTUAL ASSISTANT."];
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -16,7 +17,7 @@ const Hero = () => {
     if (pauseBeforeTyping) {
       const delay = setTimeout(() => {
         setPauseBeforeTyping(false);
-      }, 800);
+      }, 1000);
       return () => clearTimeout(delay);
     }
 
@@ -44,65 +45,133 @@ const Hero = () => {
 
   return (
     <section className="hero min-h-screen bg-[#22272f] px-4 md:px-6 flex items-center justify-center">
-      <div
-        id="contents"
-        className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto space-y-10 md:space-y-0 px-32"
-      >
+      <div id="contents" className="flex flex-col md:flex-row items-center">
+
         {/* Left Column */}
-        <div className="text-white md:w-3/5">
-          <h1 className="text-white font-bold leading-tight text-4xl md:text-5xl mb-4">
-            <span className="block mb-2 text-white">I’m a</span>
+        <div className="md:w-4/5" id="hero-text">
+
+          {/* Mobile Title */}
+          <motion.h1
+            className="leading-tight mb-4"
+            id="hero-title-mobile"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <span className="block text-500 mb-2 text-white">I’m a</span>
+
+            {/* Roles with separate animation */}
+            <span
+              className="relative text-[#ccf381] flex flex-wrap gap-x-2"
+              id="hero-title-mobile-roles"
+            >
+              {["Web Developer", "Project Manager", "Virtual Assistant"].map(
+                (role, i) => (
+                  <motion.span
+                    key={role}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: i * 0.3 }}
+                  >
+                    {role}
+                    {i < 2 && ","}
+                    {i === 1 && " and"}
+                  </motion.span>
+                )
+              )}
+            </span>
+          </motion.h1>
+
+          {/* Typing Title */}
+          <motion.h1
+            className="leading-tight mb-4"
+            id="hero-title"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >
+            <span className="block text-500 mb-2 text-white">I’m a</span>
             <span className="relative">
-              {/* Invisible for height consistency */}
-              <span className="invisible block font-bold text-[2.5rem] md:text-[4rem]">
+              <span className="invisible block text-[2rem] md:text-[4rem]">
                 {words.reduce((a, b) => (a.length > b.length ? a : b))}
               </span>
-
-              {/* Typing animation */}
               <span className="absolute top-0 left-0 inline-flex items-baseline font-bold">
-                <span className="bg-[#ccf381] text-[#22272f] px-2 rounded text-[2.5rem] md:text-[4rem] leading-tight">
+                <span
+                  className="bg-[#ccf381] text-[#22272f] px-2 rounded text-[2.5rem] md:text-[4rem] leading-tight"
+                  id="hero-typing"
+                >
                   {text}
                 </span>
-                <span className="blinking-cursor text-white text-[2.5rem] md:text-[4rem] leading-tight">
-                  |
-                </span>
+                <span className="blinking-cursor text-white text-[2.5rem] md:text-[4rem] leading-tight">|</span>
               </span>
             </span>
-          </h1>
+          </motion.h1>
 
-          {/* Subtitle */}
-          <p className="subtitle text-base md:text-lg mt-10 leading-relaxed mb-8">
-            I build practical, user-centered solutions—whether{" "}
-            <br className="hidden sm:block" /> through code or everyday support.
-          </p>
+          {/* Paragraph */}
+          <motion.p
+            className="subtitle text-base md:text-lg mt-10 leading-relaxed mb-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          >
+            Providing businesses with modern web solutions and reliable assistance
+            to boost efficiency, streamline operations, and achieve measurable results.
+          </motion.p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4 mb-8">
-            <a
+          <motion.div
+            className="action-buttons flex gap-4"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.2, delayChildren: 0.8 }
+              }
+            }}
+          >
+            <motion.a
               href="/resume"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#ccf384] text-[#22272f] px-6 py-3 rounded font-semibold shadow hover:bg-[#b4da68] transition-all duration-300 ease-in-out"
+              className="bg-[#ccf381] text-[#22272f] px-6 py-3 rounded font-semibold shadow hover:bg-[#ccf381] transition-all duration-300 ease-in-out"
+              variants={{
+                hidden: { y: 20, opacity: 0 },
+                visible: { y: 0, opacity: 1 }
+              }}
             >
               My Resume
-            </a>
-            <a
+            </motion.a>
+
+            <motion.a
               href="/work"
-              className="border border-[#ccf381] text-[#ccf381] px-6 py-3 rounded font-semibold shadow hover:bg-[#ccf381] hover:text-[#22272f] transition-all duration-300 ease-in-out"
+              id="my-work-btn-hero"
+              className="border-2 border-[#ccf381] text-[#FEC601] px-6 py-3 rounded font-semibold shadow hover:bg-[#ccf381] transition-all duration-300 ease-in-out"
+              variants={{
+                hidden: { y: 20, opacity: 0 },
+                visible: { y: 0, opacity: 1 }
+              }}
             >
               My Work
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
 
-        {/* Right Column */}
-        <div className="md:w-2/5 flex justify-center">
+        {/* Right Column - Image */}
+        <motion.div
+          className="md:w-2/5 flex justify-center"
+          id="hero-image"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 1.2 }}
+        >
           <img
             src={profilePic}
             alt="Profile"
-            className="w-64 sm:w-80 md:w-[300px] h-auto object-cover rounded-lg shadow-lg"
+            className="w-64 sm:w-80 md:w-[700px] h-auto object-cover"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -31,9 +31,9 @@ const Works = () => {
     return (
         <section
             ref={ref}
-            className="works w-full min-h-fit md:min-h-screen bg-[#f4f4f4] px-12 py-28 flex items-center justify-center relative"
+            className="works w-full min-h-fit md:min-h-screen bg-[#f4f4f4] px-12 flex items-center justify-center relative"
         >
-            <div className="w-full max-w-7xl mx-auto bg-white p-6 md:p-12 flex flex-col gap-14">
+            <div className="w-full max-w-7xl mx-auto p-6 md:p-12 flex flex-col gap-4">
                 {/* Header with animation */}
                 <motion.div
                     className="px-4"
@@ -41,15 +41,15 @@ const Works = () => {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                    <h1 className="text-3xl font-bold text-gray-800">My Works</h1>
+                    <h1 className="">My Works</h1>
                 </motion.div>
 
                 {/* Cards in Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
                     {projects.map((item, index) => (
                         <div
                             key={index}
-                            className="group w-full h-[400px] bg-white overflow-hidden relative transition-all duration-300 border-b-4 border-transparent hover:border-[#CCF381]"
+                            className="group w-full max-h-[500px] bg-white overflow-hidden relative transition-all duration-300 border-b-4 border-transparent hover:border-[#CCF381]"
                         >
                             <img
                                 src={item.image}
@@ -67,8 +67,8 @@ const Works = () => {
                                 }}
                                 className="absolute bottom-0 left-0 w-full"
                             >
-                                <div className="bg-[#4831D4] p-6 text-white">
-                                    <h2 className="font-bold">{item.title}</h2>
+                                <div className="bg-[#4831D4] py-4 text-center text-white">
+                                    <h6 className="text-white">{item.title}</h6>
                                 </div>
                             </motion.div>
                         </div>
@@ -76,7 +76,7 @@ const Works = () => {
                 </div>
 
                 {/* See More Button */}
-                <div className="flex justify-center">
+                <div className="mt-6 flex justify-center">
                     <button
                         type="button"
                         className="relative px-14 py-4 text-[#4831d4] font-semibold text-lg border-2 border-[#4831d4] overflow-hidden transition-all duration-300 hover:text-white group"
