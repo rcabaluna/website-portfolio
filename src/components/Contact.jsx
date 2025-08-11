@@ -37,7 +37,7 @@ const Contact = () => {
     setSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost:5000/send", {
+      const response = await fetch("https://website-portfolio-backend.vercel.app/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
