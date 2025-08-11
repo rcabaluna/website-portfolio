@@ -45,7 +45,7 @@ const Sidebar = () => {
       <div id="resume-outlines">
         {/* Contact Info */}
         <section className="mb-6">
-          <a href="https://rueljr.dev" className="block font-medium">rueljr.dev</a>
+          <a href="/" className="block font-medium">ruelcabaluna.dev</a>
           <span className="block">Cagayan de Oro City, PH</span>
           <a href="mailto:rcabalunajr@gmail.com" className="block text-sm text-blue-700">
             rcabalunajr@gmail.com
