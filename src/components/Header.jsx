@@ -68,7 +68,6 @@ const Header = ({ logoColor }) => {
             <li className="flex justify-between items-center">
               <Link
                 to="/resume"
-                target="_blank"
                 className="inline-block border-b-2 border-transparent hover:border-[#4831d4] transition-all duration-300"
               >
                 My Resume
