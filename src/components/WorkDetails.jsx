@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import works from "../works"; // Import your works array
+import "../assets/css/WorkDetails.css";
+import works from "../works";
 
 const WorkDetails = () => {
     const { slug } = useParams();
 
-    // Find the project by slug
     const project = works.find((work) => work.slug === slug);
 
-    // Show full "Not Found" page if no project is found
     if (!project) {
         return (
             <div className="w-full min-h-screen flex flex-col items-center justify-center bg-gray-100 text-center px-6">
@@ -38,36 +37,68 @@ const WorkDetails = () => {
         setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     };
 
+    // Auto slide every 2 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) =>
+                prev === images.length - 1 ? 0 : prev + 1
+            );
+        }, 5000);
+
+        return () => clearInterval(interval); // cleanup on unmount
+    }, [images.length]);
+
     return (
-        <div className="w-full bg-white px-40 py-20 pt-24">
-            <div className="inner-content flex flex-col gap-10 w-full text-gray-800">
+        <div className="work-details w-full bg-white 
+            px-4 py-12           /* Mobile */
+            sm:px-6 sm:py-16     /* Small */
+            md:px-10 md:py-20    /* Medium */
+            lg:px-20 lg:py-24    /* Large */
+            xl:px-40 xl:py-20    /* Extra large */
+            pt-24"
+        >
+            <div className="inner-content flex flex-col w-full text-gray-800">
                 {/* Project Title */}
                 <h1 className="text-3xl md:text-4xl font-bold text-center">
                     {project.title}
                 </h1>
 
                 {/* Image Slider */}
-                <div className="relative w-full max-w-4xl mx-auto">
-                    <img
-                        src={images[currentIndex]}
-                        alt={`Slide ${currentIndex + 1}`}
-                        className="w-full transition-all duration-500"
-                    />
+                <div className="relative w-full max-w-3xl mt-4 mx-auto overflow-hidden rounded-md">
+                    <div
+                        className="flex transition-transform duration-700 ease-in-out"
+                        style={{
+                            transform: `translateX(-${currentIndex * 100}%)`
+                        }}
+                    >
+                        {images.map((img, index) => (
+                            <img
+                                key={index}
+                                src={img}
+                                alt={`Slide ${index + 1}`}
+                                className="w-full flex-shrink-0"
+                            />
+                        ))}
+                    </div>
 
                     {/* Prev Button */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 text-white p-2 hover:bg-opacity-70"
+                        className="absolute left-4 top-1/2 -translate-y-1/2 
+                   text-3xl font-bold text-gray-700 hover:text-gray-900 
+                   bg-transparent z-10"
                     >
-                        ◀
+                        &lt;
                     </button>
 
                     {/* Next Button */}
                     <button
                         onClick={nextSlide}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-white p-2 hover:bg-opacity-70"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 
+                   text-3xl font-bold text-gray-700 hover:text-gray-900 
+                   bg-transparent z-10"
                     >
-                        ▶
+                        &gt;
                     </button>
 
                     {/* Dots Navigation */}
@@ -76,17 +107,18 @@ const WorkDetails = () => {
                             <div
                                 key={index}
                                 onClick={() => setCurrentIndex(index)}
-                                className={`w-3 h-3 rounded-full cursor-pointer ${index === currentIndex
-                                    ? "bg-gray-800"
-                                    : "bg-gray-400"
+                                className={`w-3 h-3 rounded-full cursor-pointer ${index === currentIndex ? "bg-gray-800" : "bg-gray-400"
                                     }`}
                             ></div>
                         ))}
                     </div>
                 </div>
 
+
+
                 {/* Project Description */}
-                <div className=" mx-auto text-justify leading-relaxed space-y-4">
+                <div className="mx-auto text-justify leading-relaxed space-y-4">
+                    <h4>Description:</h4>
                     {Array.isArray(project.description) ? (
                         project.description.map((paragraph, index) => (
                             <p key={index}>{paragraph}</p>
@@ -96,17 +128,14 @@ const WorkDetails = () => {
                     )}
                 </div>
 
-
                 {/* Tech Stack */}
-                <div className=" mx-auto text-center">
-                    <h2 className="text-xl font-semibold mb-4">
-                        Tech Stack
-                    </h2>
-                    <div className="flex flex-wrap justify-center gap-3">
+                <div>
+                    <h4 className="text-xl font-semibold mb-4">Tech Stack Used:</h4>
+                    <div className="flex flex-wrap gap-3">
                         {techStack.map((tech, index) => (
                             <span
                                 key={index}
-                                className="px-4 py-2 bg-gray-100 border border-gray-300 text-gray-800 rounded-full text-sm font-medium shadow-sm hover:bg-gray-200 transition"
+                                className="px-4 py-2 bg-gray-100 border border-gray-300 text-gray-600 rounded-full text-xs font-medium shadow-sm hover:bg-gray-200 transition"
                             >
                                 {tech}
                             </span>

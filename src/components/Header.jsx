@@ -24,12 +24,12 @@ const Header = ({ logoColor }) => {
     <header className="fixed top-0 left-0 w-full z-50 px-10 py-6 bg-transparent">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center relative">
         {/* Logo */}
-        <span
+        <a href="/"
           className="text-4xl font-bold tracking-tight transition-colors duration-500"
           style={{ color: logoColor }}
         >
           {"<ruru />"}
-        </span>
+        </a>
 
         {/* Toggle Menu Icon */}
         <button
@@ -88,7 +88,6 @@ const Header = ({ logoColor }) => {
             </li>
           </ul>
 
-          {/* Contact Info */}
           {/* Contact Info */}
           <div className="px-6 pb-6 pt-2 text-sm text-[#474747bf]">
             <h3>SAY HELLO</h3>
