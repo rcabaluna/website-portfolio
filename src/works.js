@@ -1,7 +1,7 @@
 const works = [
 	{
 		slug: "human-resource-management-information-system",
-		title: "DOST 10 - Human Resource Management Informationx System",
+		title: "DOST 10 - Human Resource Management Information System",
 		images: [
 			"/assets/images/projects/hrmis1.png",
 			"/assets/images/projects/hrmis2.png",
