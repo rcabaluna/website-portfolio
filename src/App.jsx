@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/works" element={<Works />} />
-        <Route path="/work/:slug" element={<Work />} /> {/* Dynamic route */}
+        <Route path="/work/:slug" element={<Work />} />
       </Routes>
     </BrowserRouter>
   );

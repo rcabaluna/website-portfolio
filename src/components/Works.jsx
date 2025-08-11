@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "../assets/css/Works.css";
 import { motion, useInView } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import ecommerceImage from "../assets/images/projects/e-commerce.png";
 import portalImage from "../assets/images/projects/portal.png";
@@ -77,8 +78,8 @@ const Works = () => {
 
                 {/* See More Button */}
                 <div className="mt-6 flex justify-center">
-                    <button
-                        type="button"
+                    <Link
+                        to="/works"
                         className="relative px-14 py-4 text-[#4831d4] font-semibold text-lg border-2 border-[#4831d4] overflow-hidden transition-all duration-300 hover:text-white group"
                     >
                         <span className="absolute inset-0 bg-[#4831d4] w-0 group-hover:w-full transition-all duration-300 ease-in-out z-0"></span>
@@ -92,7 +93,7 @@ const Works = () => {
                                 <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z" />
                             </svg>
                         </span>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>
