@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../assets/css/Header.css"; // Assuming you have a CSS file for styles
+import "../assets/css/Header.css";
+import { Link } from "react-router-dom";
+
 
 const Header = ({ logoColor }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,15 +63,16 @@ const Header = ({ logoColor }) => {
             : "opacity-0 scale-95 invisible"
             }`}
         >
+
           <ul className="flex flex-col gap-4 px-6 py-6 text-lg font-medium text-[#22272f]">
             <li className="flex justify-between items-center">
-              <a
-                href="/resume"
+              <Link
+                to="/resume"
                 target="_blank"
                 className="inline-block border-b-2 border-transparent hover:border-[#4831d4] transition-all duration-300"
               >
                 My Resume
-              </a>
+              </Link>
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-gray-500 hover:text-red-500 text-xl font-bold focus:outline-none ml-4"
@@ -79,12 +82,12 @@ const Header = ({ logoColor }) => {
               </button>
             </li>
             <li>
-              <a
-                href="/works"
+              <Link
+                to="/works"
                 className="inline-block border-b-2 border-transparent hover:border-[#4831d4] transition-all duration-300"
               >
                 My Works
-              </a>
+              </Link>
             </li>
           </ul>
 
