@@ -40,7 +40,7 @@ const Footer = () => {
                         <div className="flex gap-6">
                             {/* LinkedIn */}
                             <a
-                                href="https://www.linkedin.com/in/ruel-cabaluna-jr-1393a1b7/"
+                                href="https://www.linkedin.com/in/rcabalunajr/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="LinkedIn"

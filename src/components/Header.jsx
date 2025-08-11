@@ -114,7 +114,7 @@ const Header = ({ logoColor }) => {
             <div className="flex gap-4 text-[#474747bf]" id="social-icons">
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/ruel-cabaluna-jr-1393a1b7/"
+                href="https://www.linkedin.com/in/rcabalunajr/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#4831d4] transition"
