@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion"; // ✅ Added for animations
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ Normal Link
 import "../assets/css/Hero.css";
 import profilePic from "../assets/images/profile.png";
 
@@ -10,6 +11,7 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [speed, setSpeed] = useState(150);
   const [pauseBeforeTyping, setPauseBeforeTyping] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
 
   useEffect(() => {
     const currentWord = words[wordIndex];
@@ -43,6 +45,13 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [text, isDeleting, wordIndex, speed, pauseBeforeTyping]);
 
+  useEffect(() => {
+    const buttonTimer = setTimeout(() => {
+      setShowButtons(true);
+    }, 800); // delay for fade-in
+    return () => clearTimeout(buttonTimer);
+  }, []);
+
   return (
     <section className="hero min-h-screen bg-[#22272f] px-4 md:px-6 flex items-center justify-center">
       <div id="contents" className="flex flex-col md:flex-row items-center">
@@ -60,7 +69,7 @@ const Hero = () => {
           >
             <span className="block text-500 mb-2 text-white">I’m a</span>
 
-            {/* Roles with separate animation */}
+            {/* Roles */}
             <span
               className="relative text-[#ccf381] flex flex-wrap gap-x-2"
               id="hero-title-mobile-roles"
@@ -75,7 +84,6 @@ const Hero = () => {
                   >
                     {role}
                     {i < 2 && ","}
-                    {i === 1 && ""}
                   </motion.span>
                 )
               )}
@@ -93,44 +101,26 @@ const Hero = () => {
             to boost efficiency, streamline operations, and achieve measurable results.
           </motion.p>
 
-          {/* Buttons */}
-          <motion.div
-            className="action-buttons flex gap-4"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2, delayChildren: 0.8 }
-              }
-            }}
+          {/* Buttons with fade-in */}
+          <div
+            className={`action-buttons flex gap-4 transition-opacity duration-1000 ${showButtons ? "opacity-100" : "opacity-0"
+              }`}
           >
-            <motion.a
-              href="/resume"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#ccf381] text-[#22272f] px-6 py-3 rounded font-semibold shadow hover:bg-[#ccf381] transition-all duration-300 ease-in-out"
-              variants={{
-                hidden: { y: 20, opacity: 0 },
-                visible: { y: 0, opacity: 1 }
-              }}
+            <Link
+              to="/resume"
+              className="bg-[#ccf381] text-[#22272f] px-6 py-3 rounded font-semibold shadow hover:bg-[#ccf381] hover:scale-105 hover:shadow-lg transition-transform duration-300 ease-in-out flex items-center justify-center"
             >
               My Resume
-            </motion.a>
+            </Link>
 
-            <motion.a
-              href="/works"
+            <Link
+              to="/works"
               id="my-work-btn-hero"
-              className="border-2 border-[#ccf381] text-[#FEC601] px-6 py-3 rounded font-semibold shadow hover:bg-[#ccf381] transition-all duration-300 ease-in-out"
-              variants={{
-                hidden: { y: 20, opacity: 0 },
-                visible: { y: 0, opacity: 1 }
-              }}
+              className="border-2 border-[#ccf381] text-[#FEC601] px-6 py-3 rounded font-semibold shadow hover:bg-[#ccf381] hover:text-[#22272f] hover:scale-105 hover:shadow-lg transition-transform duration-300 ease-in-out flex items-center justify-center"
             >
               My Works
-            </motion.a>
-          </motion.div>
+            </Link>
+          </div>
         </div>
 
         {/* Right Column - Image */}
