@@ -246,7 +246,7 @@
 /* xl: 1280px – 1535px */
 @media (min-width: 1280px) and (max-width: 1535px) {
 	.hero {
-		padding: 10em 6em;
+		padding: 6em 6em;
 	}
 
 	#hero-title {
@@ -255,12 +255,12 @@
 
 	#hero-title-mobile {
 		display: block;
-		font-size: 3em;
+		font-size: 2em;
 		line-height: 1.2;
 	}
 
 	#hero-title-mobile-roles {
-		font-size: 4rem;
+		font-size: 3.5rem;
 		font-weight: bold;
 		line-height: 0.9;
 		letter-spacing: -0.03em;
@@ -301,7 +301,7 @@
 }
 
 /* 2xl: ≥1536px */
-@media (min-width: 1536px) {
+@media (min-width: 1536px) and (max-width: 1919px) {
 	.hero {
 		padding: 5em 10em;
 	}
@@ -338,6 +338,63 @@
 	.action-buttons a {
 		padding: 0.4em 1.2em;
 		font-size: 0.9em;
+	}
+
+	#hero-text {
+		width: 50%;
+		margin-right: 10%;
+	}
+
+	#hero-image {
+		width: 40%;
+		height: auto;
+		border-radius: 10px;
+	}
+
+	#hero-image img {
+		max-width: 500px;
+		height: auto;
+		margin: auto 0;
+	}
+}
+
+@media (min-width: 1920px) {
+	.hero {
+		padding: 5em 10em;
+	}
+
+	#hero-title {
+		display: none;
+	}
+
+	#hero-title-mobile {
+		display: block;
+		font-size: 2.5em;
+		line-height: 0.6;
+	}	
+
+	#hero-title-mobile-roles {
+		font-size: 5rem;
+		font-weight: bold;
+		line-height: 0.9;
+		letter-spacing: -0.03em;
+	}
+
+	.subtitle {
+		margin-top: 2em;
+		font-size: 1.1em !important;
+	}
+
+	.action-buttons {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1em;
+	}
+
+	.action-buttons a {
+		padding: 0.8em 1.5em;
+		font-size: 1.1em;
 	}
 
 	#hero-text {

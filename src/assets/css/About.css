@@ -86,8 +86,8 @@
 
 @media (min-width: 1280px) and (max-width: 1535px) {
 	.about {
-		padding: 10em 6rem;
-		font-size: 0.9em;
+		padding: 6rem;
+		font-size: 0.8em;
 	}
 
 	.top-svg,
@@ -100,10 +100,17 @@
 	}
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1536px) and (max-width: 1919px) {
 	.about {
 		padding: 10em 10rem;
 		font-size: 0.9em;
 	}
 	
+}
+
+@media (min-width: 1920px) {
+	.about {
+		padding: 10em 10rem;
+		font-size: 1.1em;
+	}
 }

@@ -112,8 +112,8 @@
 /* xl: 1280px – 1535px */
 @media (min-width: 1280px) and (max-width: 1535px) {
 	.experience {
-		padding: 6em 4em; /* smaller padding */
-		font-size: 0.95em;
+		padding: 6em; /* smaller padding */
+		font-size: 0.8em;
 	}
 
 	.svg-div {
@@ -134,7 +134,7 @@
 }
 
 /* 2xl: ≥1536px */
-@media (min-width: 1536px) {
+@media (min-width: 1536px) and (max-width: 1919px) {
 	.experience {
 		padding: 5em 10rem; /* smaller padding */
 		font-size: 1em;
@@ -153,6 +153,30 @@
 	}
 
 	.experience h1 {
-		font-size: 4em;
+		font-size: 3.5em;
+	}
+}
+
+
+@media (min-width: 1920px) {
+	.experience {
+		padding: 10em 10rem; /* smaller padding */
+		font-size: 1.1em;
+	}
+
+	.svg-div {
+		display: block; /* show SVG div */
+	}
+
+	.working-image {
+		display: block;
+		margin: 0 auto; /* center horizontally */
+		max-width: 700px;
+		max-height: 700px;
+		transform: none; /* remove shift */
+	}
+
+	.experience h1 {
+		font-size: 3.5em;
 	}
 }

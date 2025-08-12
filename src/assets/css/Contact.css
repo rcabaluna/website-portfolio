@@ -13,7 +13,7 @@
 .contact .cavalier p {
 	color: #3d155f;
 	margin: 0 auto;
-	font-size: 1.6em;
+	font-size: 0.9em;
 	line-height: 1.2;
 	margin-top: 15px;
 	letter-spacing: 0.02em;
@@ -76,4 +76,27 @@
 	outline: none;
 	border-bottom: 1px solid #3d155f;
 	box-shadow: none;
+}
+
+
+@media (min-width: 1280px) and (max-width: 1535px) {
+	.contact{
+		padding: 6em;
+	}
+
+	.contact input textarea,
+.contact input input:not([type="submit"]):not([type="button"]) {
+	line-height: 1.5;
+	font-size: 0.9em;
+	font-weight: 600;
+}
+
+}
+
+@media (min-width: 1920px) {
+	.contact {
+		padding: 10em 10rem; /* smaller padding */
+		font-size: 1.1em;
+	}
+
 }

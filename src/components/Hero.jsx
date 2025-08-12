@@ -82,31 +82,6 @@ const Hero = () => {
             </span>
           </motion.h1>
 
-          {/* Typing Title */}
-          <motion.h1
-            className="leading-tight mb-4"
-            id="hero-title"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          >
-            <span className="block text-500 mb-2 text-white">I’m a</span>
-            <span className="relative">
-              <span className="invisible block text-[2rem] md:text-[4rem]">
-                {words.reduce((a, b) => (a.length > b.length ? a : b))}
-              </span>
-              <span className="absolute top-0 left-0 inline-flex items-baseline font-bold">
-                <span
-                  className="bg-[#ccf381] text-[#22272f] px-2 rounded text-[2.5rem] md:text-[4rem] leading-tight"
-                  id="hero-typing"
-                >
-                  {text}
-                </span>
-                <span className="blinking-cursor text-white text-[2.5rem] md:text-[4rem] leading-tight">|</span>
-              </span>
-            </span>
-          </motion.h1>
-
           {/* Paragraph */}
           <motion.p
             className="subtitle text-base md:text-lg mt-10 leading-relaxed mb-8"

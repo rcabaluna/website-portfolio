@@ -132,7 +132,7 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
-                rows="5"
+                rows="2"
                 placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
                 className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4831d4]"
                 value={formData.message}
