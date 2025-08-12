@@ -87,6 +87,36 @@ const works = [
 	},
 	// Non-DOST projects follow
 	{
+		slug: "lifebank-foundation-online-recruitment-system",
+		title: "Lifebank Foundation Inc. - Online Recruitment System",
+		cover: "/assets/images/lifebank.jpg",
+		images: ["/assets/images/no-image-available.png"],
+		summary:
+			"A modern online recruitment platform developed for Lifebank Foundation Inc. to fully digitalize its hiring process. The system enables applicants to submit applications, upload resumes, and track their status online, while HR personnel can efficiently filter, shortlist, and manage candidates from a centralized dashboard. By replacing manual processes with automated workflows, the platform significantly reduces paperwork, improves communication, and speeds up the recruitment cycle.",
+		description: [
+			"The Lifebank Foundation Inc. Online Recruitment System was built to address the challenges of traditional hiring, which often involved time-consuming paperwork, manual screenings, and inefficient communication. This web-based platform allows job seekers to create accounts, fill out detailed application forms, and upload supporting documents directly through the system. The process is streamlined to ensure applicants can easily submit all necessary information without the delays of physical submission.",
+			"For HR teams, the platform offers a centralized dashboard where recruiters can view, filter, and sort applicants based on criteria such as qualifications, experience, and application status. Advanced search tools and automated notifications ensure that promising candidates are identified quickly, reducing the time-to-hire. Built-in communication tools allow HR personnel to send interview invites, updates, and feedback directly from the system.",
+			"The recruitment workflow is further enhanced by features such as status tracking, interview scheduling, and applicant history logs. Candidates can monitor their application progress in real time, eliminating the uncertainty that often comes with job applications. Additionally, HR staff have full access to reporting and analytics, enabling data-driven decisions to improve recruitment strategies.",
+			"By integrating all recruitment activities into a single digital platform, the Lifebank Foundation Online Recruitment System has transformed the hiring process into a faster, more transparent, and more efficient experience for both applicants and recruiters.",
+		],
+		techstack: ["Vanilla PHP", "Bootstrap", "MySQL"],
+	},
+	{
+		slug: "he-and-sons-helpdesk",
+		title: "HE and Sons Helpdesk",
+		cover: "/assets/images/heandsons.jpg",
+		images: ["/assets/images/no-image-available.png"],
+		summary:
+			"A centralized internal helpdesk and ticketing platform designed to handle service requests, concerns, and operational issues across all units of the company—not just IT. It streamlines the submission, tracking, and resolution of requests while enabling better workload management, communication, and accountability among departments.",
+		description: [
+			"The HE and Sons Helpdesk System was developed as a unified platform to manage and resolve different types of internal issues—from technical problems and equipment repairs to administrative requests, facility maintenance, and HR-related concerns. Employees can submit service requests through a user-friendly web portal, attach supporting details or documents, and monitor the progress of their tickets in real time.",
+			"Each request is categorized by type and priority, allowing supervisors or designated handlers to route it to the appropriate unit for action. This ensures that IT issues go to the tech team, HR matters to the human resources unit, and facility-related concerns to the maintenance crew—eliminating delays caused by misdirected requests.",
+			"The system supports automated email notifications to keep requesters updated on status changes, reducing unnecessary follow-up communications. It also includes workload tracking and performance reporting tools for managers to monitor response times and resolution efficiency across all departments.",
+			"A built-in knowledge base offers guides, FAQs, and troubleshooting steps for common issues, empowering employees to address minor concerns on their own. By centralizing all service requests in one platform, the HE and Sons Helpdesk enhances coordination, boosts productivity, and ensures greater accountability in resolving company-wide issues.",
+		],
+		techstack: ["CodeIgniter", "Bootstrap", "MySQL"],
+	},
+	{
 		slug: "central-juan-it-solutions-ecommerce",
 		title: "Central Juan IT Solutions",
 		cover: "/assets/images/centraljuan.jpg",
@@ -108,36 +138,6 @@ const works = [
 		techstack: ["WordPress", "Divi", "WooCommerce", "MySQL"],
 	},
 	{
-		slug: "he-and-sons-helpdesk",
-		title: "HE and Sons Helpdesk",
-		cover: "/assets/images/heandsons.jpg",
-		images: ["/assets/images/no-image-available.png"],
-		summary:
-			"A centralized internal helpdesk and ticketing platform designed to handle service requests, concerns, and operational issues across all units of the company—not just IT. It streamlines the submission, tracking, and resolution of requests while enabling better workload management, communication, and accountability among departments.",
-		description: [
-			"The HE and Sons Helpdesk System was developed as a unified platform to manage and resolve different types of internal issues—from technical problems and equipment repairs to administrative requests, facility maintenance, and HR-related concerns. Employees can submit service requests through a user-friendly web portal, attach supporting details or documents, and monitor the progress of their tickets in real time.",
-			"Each request is categorized by type and priority, allowing supervisors or designated handlers to route it to the appropriate unit for action. This ensures that IT issues go to the tech team, HR matters to the human resources unit, and facility-related concerns to the maintenance crew—eliminating delays caused by misdirected requests.",
-			"The system supports automated email notifications to keep requesters updated on status changes, reducing unnecessary follow-up communications. It also includes workload tracking and performance reporting tools for managers to monitor response times and resolution efficiency across all departments.",
-			"A built-in knowledge base offers guides, FAQs, and troubleshooting steps for common issues, empowering employees to address minor concerns on their own. By centralizing all service requests in one platform, the HE and Sons Helpdesk enhances coordination, boosts productivity, and ensures greater accountability in resolving company-wide issues.",
-		],
-		techstack: ["CodeIgniter", "Bootstrap", "MySQL"],
-	},
-	{
-		slug: "lifebank-foundation-online-recruitment-system",
-		title: "Lifebank Foundation Inc. - Online Recruitment System",
-		cover: "/assets/images/lifebank.jpg",
-		images: ["/assets/images/no-image-available.png"],
-		summary:
-			"A modern online recruitment platform developed for Lifebank Foundation Inc. to fully digitalize its hiring process. The system enables applicants to submit applications, upload resumes, and track their status online, while HR personnel can efficiently filter, shortlist, and manage candidates from a centralized dashboard. By replacing manual processes with automated workflows, the platform significantly reduces paperwork, improves communication, and speeds up the recruitment cycle.",
-		description: [
-			"The Lifebank Foundation Inc. Online Recruitment System was built to address the challenges of traditional hiring, which often involved time-consuming paperwork, manual screenings, and inefficient communication. This web-based platform allows job seekers to create accounts, fill out detailed application forms, and upload supporting documents directly through the system. The process is streamlined to ensure applicants can easily submit all necessary information without the delays of physical submission.",
-			"For HR teams, the platform offers a centralized dashboard where recruiters can view, filter, and sort applicants based on criteria such as qualifications, experience, and application status. Advanced search tools and automated notifications ensure that promising candidates are identified quickly, reducing the time-to-hire. Built-in communication tools allow HR personnel to send interview invites, updates, and feedback directly from the system.",
-			"The recruitment workflow is further enhanced by features such as status tracking, interview scheduling, and applicant history logs. Candidates can monitor their application progress in real time, eliminating the uncertainty that often comes with job applications. Additionally, HR staff have full access to reporting and analytics, enabling data-driven decisions to improve recruitment strategies.",
-			"By integrating all recruitment activities into a single digital platform, the Lifebank Foundation Online Recruitment System has transformed the hiring process into a faster, more transparent, and more efficient experience for both applicants and recruiters.",
-		],
-		techstack: ["Vanilla PHP", "Bootstrap", "MySQL"],
-	},
-	{
 		slug: "h-proper-coffee-roasters",
 		title: "H Proper Coffee Roasters",
 		cover: "/assets/images/hproper.jpg",
@@ -150,6 +150,22 @@ const works = [
 			"This project served as the brand’s foundation for digital marketing, helping it reach a wider audience and strengthen its identity in both local and global markets.",
 		],
 		techstack: ["WordPress", "Divi", "WooCommerce", "MySQL"],
+	},
+	{
+		slug: "nstw-2025-app",
+		title: "[Case Study] NSTW 2025 App",
+		cover: "/assets/images/nstw2025-app.png",
+		images: [
+			"/assets/images/projects/nstw2025-1.png",
+			"/assets/images/projects/nstw2025-2.png",
+			"/assets/images/projects/nstw2025-3.png",
+		],
+		summary:
+			"A custom interactive application developed for the National Science and Technology Week (NSTW) 2025 to showcase programs, projects, and technologies through an engaging digital experience. The app serves as the central platform for event information, project navigation, and multimedia content, providing visitors with an immersive way to explore the featured innovations.",
+		description: [
+			"The landing page of the NSTW 2025 App was designed to make an immediate impact, welcoming users with a vibrant hero section that features bold event branding, a dynamic background animation, and a clear call-to-action to explore the app. The design uses a balanced mix of modern typography, national colors, and clean UI elements to set the tone for an exciting and informative experience.",
+		],
+		techstack: ["WordPress", "Elementor", "MySQL"],
 	},
 ];
 
