@@ -80,13 +80,16 @@ const Works = () => {
                 <div className="mt-6 flex justify-center">
                     <Link
                         to="/works"
-                        className="relative px-14 py-4 text-[#4831d4] font-semibold text-lg border-2 border-[#4831d4] overflow-hidden transition-all duration-300 hover:text-white group"
+                        className="relative px-6 py-2 text-sm sm:px-10 sm:py-3 sm:text-base md:px-12 md:py-3 md:text-lg lg:px-14 lg:py-4 lg:text-xl text-[#4831d4] font-semibold border-2 border-[#4831d4] overflow-hidden transition-all duration-300 hover:text-white group"
                     >
+                        {/* Hover background animation */}
                         <span className="absolute inset-0 bg-[#4831d4] w-0 group-hover:w-full transition-all duration-300 ease-in-out z-0"></span>
-                        <span className="relative z-10 flex items-center gap-3">
+
+                        {/* Button text + icon */}
+                        <span className="relative z-10 flex items-center gap-2 sm:gap-3">
                             See More
                             <svg
-                                className="w-6 h-6 transform transition-transform duration-300 group-hover:translate-x-1"
+                                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 transform transition-transform duration-300 group-hover:translate-x-1"
                                 fill="currentColor"
                                 viewBox="0 0 24 24"
                             >
@@ -95,6 +98,7 @@ const Works = () => {
                         </span>
                     </Link>
                 </div>
+
             </div>
         </section>
     );
