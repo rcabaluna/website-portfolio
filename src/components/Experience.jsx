@@ -30,7 +30,7 @@ const imageVariant = {
 
 const Experience = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-350px" });
+    const isInView = useInView(ref, { once: true, margin: "-150px" });
 
     return (
         <section

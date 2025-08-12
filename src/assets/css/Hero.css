@@ -24,25 +24,6 @@
 	align-items: center;
 }
 
-.hero .running-text {
-	line-height: 1.2;
-	text-transform: uppercase;
-	font-size: 1.1em;
-	font-weight: 800;
-}
-
-.blinking-cursor {
-	display: inline-block;
-	margin-left: 2px;
-	animation: blink 1s steps(1, start) infinite;
-}
-
-@keyframes blink {
-	50% {
-		opacity: 0;
-	}
-}
-
 #my-work-btn-hero {
 	color: #ccf381;
 }
@@ -54,7 +35,7 @@
 /* Mobile: <640px */
 @media screen and (max-width: 639px) {
 	.hero {
-		padding: 6em 4em;
+		padding: 6em 2rem;
 		text-align: center;
 	}
 	#hero-title {
@@ -63,13 +44,16 @@
 
 	#hero-title-mobile {
 		display: block;
-		font-size: 2.5em;
-		line-height: 1.2;
+		font-size: 2em;
+	}
+
+	#hero-title-mobile-roles {
+		text-align: center !important;
 	}
 
 	.subtitle {
 		margin-top: 1.2em;
-		font-size: 0.9em !important;
+		font-size: 0.75em !important;
 	}
 
 	.action-buttons {
@@ -79,7 +63,7 @@
 	}
 
 	.action-buttons a {
-		margin: 0.5em;
+		margin: 0.5em 0;
 		padding: 0.4em 1.2em;
 		font-size: 0.9em;
 	}
@@ -371,7 +355,7 @@
 		display: block;
 		font-size: 2.5em;
 		line-height: 0.6;
-	}	
+	}
 
 	#hero-title-mobile-roles {
 		font-size: 5rem;

@@ -71,7 +71,7 @@ const Hero = () => {
 
             {/* Roles */}
             <span
-              className="relative text-[#ccf381] flex flex-wrap gap-x-2"
+              className="relative text-[#ccf381] text-center gap-x-2"
               id="hero-title-mobile-roles"
             >
               {["Web Developer", "Project Manager", "Virtual Assistant"].map(
@@ -83,7 +83,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: i * 0.3 }}
                   >
                     {role}
-                    {i < 2 && ","}
+                    {i < 2 && ", "}
                   </motion.span>
                 )
               )}
