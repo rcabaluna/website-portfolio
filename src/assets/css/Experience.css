@@ -8,7 +8,7 @@
 
 .experience p {
 	line-height: 1.6;
-	font-size: 1.07em;
+	font-size: 1em;
 	font-weight: 400;
 	color: white;
 }
@@ -113,7 +113,6 @@
 @media (min-width: 1280px) and (max-width: 1535px) {
 	.experience {
 		padding: 6em; /* smaller padding */
-		font-size: 0.8em;
 	}
 
 	.svg-div {
@@ -137,7 +136,6 @@
 @media (min-width: 1536px) and (max-width: 1919px) {
 	.experience {
 		padding: 5em 10rem; /* smaller padding */
-		font-size: 1em;
 	}
 
 	.svg-div {
@@ -157,11 +155,9 @@
 	}
 }
 
-
 @media (min-width: 1920px) {
 	.experience {
 		padding: 10em 10rem; /* smaller padding */
-		font-size: 1.1em;
 	}
 
 	.svg-div {

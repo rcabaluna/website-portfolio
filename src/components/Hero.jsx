@@ -75,7 +75,7 @@ const Hero = () => {
                   >
                     {role}
                     {i < 2 && ","}
-                    {i === 1 && " and"}
+                    {i === 1 && ""}
                   </motion.span>
                 )
               )}

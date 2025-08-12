@@ -1,6 +1,6 @@
 .about h1 {
 	margin: 0;
-	font-size: 4em;
+	font-size: 3.5em;
 	font-weight: 800;
 	line-height: 1.1;
 	letter-spacing: -0.03em;
@@ -9,11 +9,9 @@
 
 .about p {
 	line-height: 1.6;
+	font-size: 1em;
 	color: #3d155f;
-	font-size: 1.07em;
-	font-weight: 400;
 }
-
 
 @media (max-width: 639px) {
 	.about {
@@ -65,8 +63,8 @@
 
 @media (min-width: 1024px) and (max-width: 1279px) {
 	.about {
-		padding: 10em 4rem;
-		font-size: 0.7em;
+		padding: 4em;
+		font-size: 0.8em;
 	}
 
 	.top-svg,
@@ -75,7 +73,7 @@
 	}
 
 	.about h1 {
-		font-size: 5em; /* larger font size */
+		font-size: 3em; /* larger font size */
 	}
 
 	.develop-row,
@@ -87,7 +85,6 @@
 @media (min-width: 1280px) and (max-width: 1535px) {
 	.about {
 		padding: 6rem;
-		font-size: 0.8em;
 	}
 
 	.top-svg,
@@ -103,14 +100,11 @@
 @media (min-width: 1536px) and (max-width: 1919px) {
 	.about {
 		padding: 10em 10rem;
-		font-size: 0.9em;
 	}
-	
 }
 
 @media (min-width: 1920px) {
 	.about {
 		padding: 10em 10rem;
-		font-size: 1.1em;
 	}
 }
