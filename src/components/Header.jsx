@@ -57,7 +57,7 @@ const Header = ({ logoColor }) => {
         <Link
           to="/"
           className={`font-bold tracking-tight transition-all duration-500 ease-in-out 
-            text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
+            text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl
             ${showLogo ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"}`}
           style={{ color: currentLogoColor }}
         >
