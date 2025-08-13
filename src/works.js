@@ -152,6 +152,21 @@ const works = [
 		techstack: ["WordPress", "Divi", "WooCommerce", "MySQL"],
 	},
 	{
+	slug: "seo-korean-mart-ecommerce",
+	title: "SEO Korean Mart",
+	cover: "/assets/images/seokoreanmart.jpg",
+	images: ["/assets/images/no-image-available.png"],
+	summary:
+		"A modern e-commerce platform for SEO Korean Mart, a specialty store offering authentic Korean groceries, snacks, and products. The system features an intuitive product catalog, secure online ordering, and integrated payment and delivery tracking. Built with mobile responsiveness, it ensures a seamless shopping experience for both local and nationwide customers.",
+	description: [
+		"SEO Korean Mart is a retail store specializing in authentic Korean food, snacks, beauty products, and household items. It aims to bring the Korean shopping experience closer to customers in the Philippines.",
+		"The SEO Korean Mart e-commerce system was developed to manage product listings, handle secure transactions, and streamline order processing. It includes a responsive storefront, product categorization, shopping cart, and integrated payment gateways.",
+		"With its clean interface and scalable architecture, the platform supports future enhancements such as loyalty programs, promotional discounts, and real-time delivery tracking.",
+	],
+	techstack: ["WordPress", "WooCommerce", "Elementor", "MySQL"],
+},
+
+	{
 		slug: "nstw-2025-app",
 		title: "[Case Study] NSTW 2025 App",
 		cover: "/assets/images/nstw2025-app.png",
