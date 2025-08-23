@@ -74,7 +74,7 @@ const Hero = () => {
               className="relative text-[#ccf381] text-center gap-x-2"
               id="hero-title-mobile-roles"
             >
-              {["Web Developer", "Project Manager", "Virtual Assistant"].map(
+              {["Web Developer", "Project Manager"].map(
                 (role, i) => (
                   <motion.span
                     key={role}
