@@ -83,7 +83,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: i * 0.3 }}
                   >
                     {role}
-                    {i < 2 && ", "}
+                    {i < 1 && ", "}
                   </motion.span>
                 )
               )}
