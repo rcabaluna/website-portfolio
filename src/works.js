@@ -17,7 +17,7 @@ const works = [
 	{
 		slug: "dost10-customer-satisfaction-tool",
 		title: "DOST 10 - Customer Satisfaction Tool",
-		cover: "/assets/images/dost.jpg",
+		cover: "/assets/images/cover/css.png",
 		images: [
 			"/assets/images/projects/css1.png",
 			"/assets/images/projects/css2.png",
@@ -41,7 +41,7 @@ const works = [
 	{
 		slug: "integrated-supplies-and-procurement-management-system",
 		title: "DOST 10 - Integrated Supplies and Procurement Management System",
-		cover: "/assets/images/dost.jpg",
+		cover: "/assets/images/cover/ispms.png",
 		images: [
 			"/assets/images/projects/ispms1.png",
 			"/assets/images/projects/ispms2.png",
@@ -65,7 +65,7 @@ const works = [
 	{
 		slug: "human-resource-management-information-system",
 		title: "DOST 10 - Human Resource Management Information System",
-		cover: "/assets/images/dost.jpg",
+		cover: "/assets/images/cover/hrmis.png",
 		images: [
 			"/assets/images/projects/hrmis1.png",
 			"/assets/images/projects/hrmis2.png",
@@ -119,7 +119,7 @@ const works = [
 	{
 		slug: "central-juan-it-solutions-ecommerce",
 		title: "Central Juan IT Solutions",
-		cover: "/assets/images/centraljuan.jpg",
+		cover: "/assets/images/cover/cj.png",
 		images: [
 			"/assets/images/projects/cj1.png",
 			"/assets/images/projects/cj2.png",
@@ -140,8 +140,13 @@ const works = [
 	{
 		slug: "h-proper-coffee-roasters",
 		title: "H Proper Coffee Roasters",
-		cover: "/assets/images/hproper.jpg",
-		images: ["/assets/images/no-image-available.png"],
+		cover: "/assets/images/cover/hproper.png",
+		images: [
+			"/assets/images/projects/hproper1.png",
+			"/assets/images/projects/hproper2.png",
+			"/assets/images/projects/hproper3.png",
+			"/assets/images/projects/hproper4.png",
+		],
 		summary:
 			"The first official website for H Proper Coffee Roasters, launched in 2019 with a minimalist, brand-focused design. It presents the café’s story, premium coffee products, and contact information in a clean, mobile-friendly format to attract both local and international customers.",
 		description: [
@@ -152,24 +157,24 @@ const works = [
 		techstack: ["WordPress", "Divi", "WooCommerce", "MySQL"],
 	},
 	{
-	slug: "seo-korean-mart-ecommerce",
-	title: "SEO Korean Mart",
-	cover: "/assets/images/seokoreanmart.jpg",
-	images: ["/assets/images/no-image-available.png"],
-	summary:
-		"A modern e-commerce platform for SEO Korean Mart, a specialty store offering authentic Korean groceries, snacks, and products. The system features an intuitive product catalog, secure online ordering, and integrated payment and delivery tracking. Built with mobile responsiveness, it ensures a seamless shopping experience for both local and nationwide customers.",
-	description: [
-		"SEO Korean Mart is a retail store specializing in authentic Korean food, snacks, beauty products, and household items. It aims to bring the Korean shopping experience closer to customers in the Philippines.",
-		"The SEO Korean Mart e-commerce system was developed to manage product listings, handle secure transactions, and streamline order processing. It includes a responsive storefront, product categorization, shopping cart, and integrated payment gateways.",
-		"With its clean interface and scalable architecture, the platform supports future enhancements such as loyalty programs, promotional discounts, and real-time delivery tracking.",
-	],
-	techstack: ["WordPress", "WooCommerce", "Elementor", "MySQL"],
-},
-
+		slug: "seo-korean-mart-ecommerce",
+		title: "SEO Korean Mart",
+		cover: "/assets/images/seokoreanmart.jpg",
+		images: ["/assets/images/no-image-available.png"],
+		summary:
+			"A modern e-commerce platform for SEO Korean Mart, a specialty store offering authentic Korean groceries, snacks, and products. The system features an intuitive product catalog, secure online ordering, and integrated payment and delivery tracking. Built with mobile responsiveness, it ensures a seamless shopping experience for both local and nationwide customers.",
+		description: [
+			"SEO Korean Mart is a retail store specializing in authentic Korean food, snacks, beauty products, and household items. It aims to bring the Korean shopping experience closer to customers in the Philippines.",
+			"The SEO Korean Mart e-commerce system was developed to manage product listings, handle secure transactions, and streamline order processing. It includes a responsive storefront, product categorization, shopping cart, and integrated payment gateways.",
+			"With its clean interface and scalable architecture, the platform supports future enhancements such as loyalty programs, promotional discounts, and real-time delivery tracking.",
+		],
+		techstack: ["WordPress", "WooCommerce", "Elementor", "MySQL"],
+	},
 	{
 		slug: "nstw-2025-app",
 		title: "[Case Study] NSTW 2025 App",
-		cover: "/assets/images/nstw2025-app.png",
+		cover: "/assets/images/cover/nstw.png",
+
 		images: [
 			"/assets/images/projects/nstw2025-1.png",
 			"/assets/images/projects/nstw2025-2.png",
@@ -181,6 +186,36 @@ const works = [
 			"The landing page of the NSTW 2025 App was designed to make an immediate impact, welcoming users with a vibrant hero section that features bold event branding, a dynamic background animation, and a clear call-to-action to explore the app. The design uses a balanced mix of modern typography, national colors, and clean UI elements to set the tone for an exciting and informative experience.",
 		],
 		techstack: ["WordPress", "Elementor", "MySQL"],
+	},
+	{
+		slug: "peech-interactive",
+		title: "PEECH Interactive",
+		cover: "/assets/images/cover/peech.png",
+
+		images: [
+			"/assets/images/projects/peech1.png",
+			"/assets/images/projects/peech2.png",
+			"/assets/images/projects/peech3.png",
+			"/assets/images/projects/peech4.png",
+			"/assets/images/projects/peech5.png",
+			"/assets/images/projects/peech6.png",
+			"/assets/images/projects/peech7.png",
+			"/assets/images/projects/peech8.png",
+			"/assets/images/projects/peech9.png",
+			"/assets/images/projects/peech10.png",
+		],
+		summary:
+			"PEECH Interactive is a smart interactive board solution designed to transform classrooms and boardrooms into collaborative, engaging, and productive spaces. With advanced touch-enabled displays, seamless device integration, and intuitive tools, PEECH empowers educators, institutions, and businesses to teach, learn, and collaborate more effectively.",
+		description: [
+			"PEECH Interactive turns ordinary spaces into smart, collaborative environments where ideas thrive. Equipped with ultra-clear 4K displays, intelligent handwriting recognition, and seamless device integration, the platform makes lessons, meetings, and presentations more dynamic and effective.",
+
+			"The technology emphasizes real-time collaboration and productivity, allowing users to connect and share content across devices, run faster meetings, and deliver engaging lessons effortlessly. PEECH adapts naturally to any environment, from classrooms to corporate boardrooms, offering flexibility and reliability.",
+
+			"Built with the mission to empower learners and professionals, PEECH focuses on innovation, seamless integration, and exceptional user experience. Optional add-ons such as mobile stands, OPS modules, wireless dongles, and document scanners allow for customization to meet specific needs.",
+
+			"Overall, PEECH provides scalable, open-platform solutions with trusted local support, ensuring long-term value and a smarter way of teaching, learning, and collaborating. It redefines interactive board technology in the Philippines, making every interaction smoother, faster, and more engaging.",
+		],
+		techstack: ["WordPress", "Elementor", "Woocommerce"],
 	},
 ];
 
